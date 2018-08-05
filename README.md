@@ -290,7 +290,35 @@ shift + F10 -> compila!
 
 ---
 
-## <a name="parte6"></a>
+## <a name="parte6">Aula 05: Tipos primitivos, convenções de código e comentários</a>
+
+- https://www.youtube.com/watch?v=g-_NSf0e0z8
+
+```java
+public class ImprimindoVariaveis {
+    public static void main(String[] args) {
+        /* Comentário
+        * de várias
+        * linhas
+        * */
+        //Comentário
+        /***
+         * Comentário de Doc oficial
+         * @param parametro de entrada
+         * */
+
+        int idade = 34;
+        int idadeDosPais = 66;
+        System.out.println("Dados impressos");
+        System.out.println(idade);
+        System.out.println(idadeDosPais);
+        System.out.println("Dados impressos" + idade);
+    }
+}
+
+```
+
+Crtl + Shift + F10 -> Compila .java atual
 
 
 [Voltar ao Índice](#indice)
@@ -319,6 +347,41 @@ shift + F10 -> compila!
 ---
 
 ## <a name="parte10"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte11"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte12"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte13"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte14"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte15"></a>
 
 
 [Voltar ao Índice](#indice)
