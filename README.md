@@ -250,7 +250,19 @@
 
 ---
 
-## <a name="parte4"></a>
+## <a name="parte4">Aula 03: Executando o processo de compilação manualmente</a>
+
+- https://www.youtube.com/watch?v=eV3mj1LOJqE
+
+```java
+public class OlaMundo {
+    public static void main(String[] args) {
+        System.out.println("Olá");
+    }
+}
+```
+1 - > javac OlaMundo.java  
+2 - > java OlaMundo  
 
 
 [Voltar ao Índice](#indice)
