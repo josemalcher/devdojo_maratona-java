@@ -269,7 +269,21 @@ public class OlaMundo {
 
 ---
 
-## <a name="parte5"></a>
+## <a name="parte5">Aula 04: Download do ambiente de desenvolvimento</a>
+
+- https://www.youtube.com/watch?v=blYNhqo7yhk
+
+- https://www.jetbrains.com/
+
+```java
+public class OlaMundo {
+    public static void main(String[] args) {
+        System.out.println("Olá na IDE");
+    }
+}
+```
+
+shift + F10 -> compila!
 
 
 [Voltar ao Índice](#indice)
