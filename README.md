@@ -233,7 +233,9 @@
 
 ---
 
-## <a name="parte2"></a>
+## <a name="parte2">Aula 01: Como JAVA funciona</a>
+
+- https://www.youtube.com/watch?v=DlZJw7TXj2g
 
 
 [Voltar ao Índice](#indice)
