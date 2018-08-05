@@ -242,9 +242,9 @@
 
 ---
 
+## <a name="parte3">Aula 02: Como instalar JAVA no windows</a>
 
-## <a name="parte3"></a>
-
+- https://www.youtube.com/watch?v=TcqICLuUuyA
 
 [Voltar ao Índice](#indice)
 
