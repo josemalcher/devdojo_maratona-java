@@ -363,7 +363,35 @@ public class Operadores {
 
 ---
 
-## <a name="parte8"></a>
+## <a name="parte8">Aula 07: Operador resto e operadores de comparação</a>
+
+- https://www.youtube.com/watch?v=GRAKRcbzEpo
+
+```java
+public class Operadores {
+    public static void main(String[] args) {
+        System.out.println("Resto da divisão = " + (21 % 2));
+    }
+}
+
+```
+
+```java
+public class OperadoresComparacao {
+    public static void main(String[] args) {
+        boolean dezMaiorQueVinte = 10 > 20;
+        boolean dezMenorQueVinte = 10 < 20;
+
+        System.out.println(dezMaiorQueVinte);
+        System.out.println(dezMenorQueVinte);
+        System.out.println( 5 == 5);
+        System.out.println( 5 != 5);
+    }
+}
+
+```
+
+
 
 
 [Voltar ao Índice](#indice)
