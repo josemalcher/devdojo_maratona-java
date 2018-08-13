@@ -320,6 +320,37 @@ public class ImprimindoVariaveis {
 
 Crtl + Shift + F10 -> Compila .java atual
 
+Prática
+
+```java
+public class RelatorioPendenci {
+    public static void main(String[] args) {
+        String nome = "Bulma";
+        String endereco = "Rua Tal tal tal ";
+        String telefone = "(91)9999-8888";
+        System.out.println("O "+nome+" endereço "+ endereco + " e telefone: "+telefone+ " não possui pendencias");
+    }
+}
+
+```
+
+Operadores
+
+```java
+public class Operadores {
+    public static void main(String[] args) {
+        int numero1 = 10;
+        int numero2 = 20;
+        int soma = numero1 + numero2;
+        System.out.println(numero1+ numero2+ " Soma antes depois " + numero1 + numero2);
+        System.out.println(numero1+ numero2 + " soma antes");
+        System.out.println("soma depois " + numero1+ numero2);
+        System.out.println("Total " + (numero1/numero2));
+    }
+}
+
+```
+
 
 [Voltar ao Índice](#indice)
 

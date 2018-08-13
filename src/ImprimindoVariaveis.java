@@ -12,6 +12,15 @@ public class ImprimindoVariaveis {
 
         int idade = 34;
         int idadeDosPais = 66;
+        double salarioDouble = 2000;
+        float salarioFloat = 2000;
+        byte idadeByte = 12;
+        short idadeShort = 2345;
+        boolean verdade = true;
+        boolean falso = false;
+        long numeroGrande = 1000L;
+        char caractere = '\u0041'; // 2 bytes // valor da tabela unicode
+        String nome = "Jose";
         System.out.println("Dados impressos");
         System.out.println(idade);
         System.out.println(idadeDosPais);
