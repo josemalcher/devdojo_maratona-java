@@ -398,8 +398,23 @@ public class OperadoresComparacao {
 
 ---
 
-## <a name="parte9"></a>
+## <a name="parte9">Aula 08: Operadores Lógicos</a>
 
+- https://www.youtube.com/watch?v=8dlThWq56DM
+
+```java
+public class OperadoresLogicos {
+    public static void main(String[] args) {
+        int idade = 18;
+        float salario = 2000f;
+
+        System.out.println(idade >= 16 && salario >= 2000);
+        System.out.println(idade <= 16 && salario >= 2000);
+        System.out.println(idade >= 16 || salario >= 2000);
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
