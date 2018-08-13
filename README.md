@@ -320,6 +320,14 @@ public class ImprimindoVariaveis {
 
 Crtl + Shift + F10 -> Compila .java atual
 
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte7">Aula 06: Continuação tipos primitivos, exercício e operadores</a>
+
 Prática
 
 ```java
@@ -350,14 +358,6 @@ public class Operadores {
 }
 
 ```
-
-
-[Voltar ao Índice](#indice)
-
----
-
-## <a name="parte7"></a>
-
 
 [Voltar ao Índice](#indice)
 
