@@ -420,8 +420,29 @@ public class OperadoresLogicos {
 
 ---
 
-## <a name="parte10"></a>
+## <a name="parte10">Aula 09: Operadores de Atribuição</a>
 
+- https://www.youtube.com/watch?v=hp1iYAoywc8
+
+```java
+public class OperadoresAtribuicao {
+    public static void main(String[] args) {
+        // = , -= , += , /= , %=
+
+        int salario = 1000;
+        //salario = salario + 200;
+        //salario += 200;
+        salario = salario + (int)(salario * 0.2);
+        int numero = 11;
+        numero %= 2;
+
+        System.out.println(salario);
+        System.out.println(numero);
+
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
