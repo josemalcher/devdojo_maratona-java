@@ -478,15 +478,41 @@ public class ControleFluxo1 {
 
 ---
 
-## <a name="parte12"></a>
+## <a name="parte12">Aula 11: Controle de fluxo: Tabela verdade e mais</a>
 
+```java
+public class ControleFluxo2 {
+    public static void main(String[] args) {
+        int idade = 15;
+        String status;
+        status = idade < 10 ? "Não adulto" : "Adulto";
+        System.out.println(status);
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte13"></a>
+## <a name="parte13">Aula 12: Controle de fluxo Resolução do exercício if else</a>
 
+```java
+public class ExercicioControleFluxo {
+    public static void main(String[] args) {
+        /*
+        * Crie uma variável salario e imprima seu imposto
+        * Imposto:
+        * salario < 1000 5%
+        * salario >= 1000 && salario < 2000 10$
+        * salario >= 2000 && salario < 4000 15%
+        * salario > 5000 20%
+        * */
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
