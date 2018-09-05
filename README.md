@@ -582,7 +582,82 @@ public class ExercicioControleFluxo3 {
 
 ---
 
-## <a name="parte15"></a>
+## <a name="parte15">Aula 14: Controle de fluxo - Solução do exercício</a>
+
+```java
+public class ExercicioControleFluxo3 {
+    /*  Crie um switch que dado um valor de 1 a 7
+     *   considerando 1 domingo imprima se é dia util ou dia de semana
+     **/
+    public static void main(String[] args) {
+        byte dia = 7;
+        switch (dia) {
+            case 1:
+            case 7:
+                System.out.println("Final de semana");
+                break;
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                System.out.println("Dia Últil");
+                break;
+            default:
+                System.out.println("Opção inválida");
+
+        }
+    }
+}
+
+```
+
+- https://pastebin.com/R5daUuuL
+
+```java
+import java.util.Scanner;
+
+public class ExercicioControleFluxo31 {
+    static void show(String mensagem) {
+        System.out.printf(mensagem + "\n");
+    }
+
+    static Scanner Scanner() {
+        return new Scanner(System.in);
+    }
+
+    public static void main(String[] args) {
+        String[] DiaDaSemana = {"Domingo", "Segunda", "Quarta", "Quinta", "Sexta", "Sábado"};
+        show("Digite um dia da semana");
+
+        int dia = Scanner().nextInt();
+
+        System.out.println();
+
+        switch (dia) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                show("Dia útil");
+                break;
+            case 5:
+                show("Final de Semana");
+                break;
+            case 6:
+                show("Dia útil");
+                break;
+            default:
+                show("Inválido");
+
+        }
+
+    }
+}
+
+
+```
 
 
 [Voltar ao Índice](#indice)
