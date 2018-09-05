@@ -691,7 +691,54 @@ public class ControleFluxo04 {
 
 ---
 
-## <a name="parte17"></a>
+## <a name="parte17">Aula 16: Exercício estrutura de repetição</a>
+
+
+- ControleFluxo04.java 
+
+```java
+public class ControleFluxo04 {
+    public static void main(String[] args) {
+        int contador = 9;
+
+        while (contador < 10) {
+            System.out.println(++contador);
+        }
+        contador = 0;
+        do {
+            System.out.println("Dentro do DO while, cont = " + contador++);
+        } while (contador < 10);
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Vador do i =" + i);
+            if (i == 5) {
+                break;
+            }
+        }
+    }
+}
+
+```
+- ExercicioControleFluxo4.java
+
+```java
+public class ExercicioControleFluxo4 {
+
+    public static void main(String[] args) {
+        // imprima todos os numero pares de 0 até 100000
+
+        int valor = 10000000;
+        for (int i = 0 ; i<= valor ; i++){
+            if(i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+
+    }
+}
+
+```
+
 
 
 [Voltar ao Índice](#indice)
