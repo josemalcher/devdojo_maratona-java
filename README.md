@@ -822,9 +822,29 @@ public class Arrays1 {
 
 ---
 
-## <a name="parte20"></a>
+## <a name="parte20">Aula 19: Arrays parte 2</a>
 
+```java
+public class Arrays2 {
+    public static void main(String[] args) {
+        // byte, short, int, long, float, double = 0
+        // char '\u0000' = ' '
+        // boolean false
+        // reference null
 
+        String[] nomes = new String[3];
+        nomes[0] = "Jose";
+        nomes[1] = "Luciana";
+        nomes[2] = "Luan";
+
+        for( int i = 0; i < nomes.length; i++){
+            System.out.println((i+ 1) + " - nome: "+ nomes[i]);
+        }
+
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
