@@ -799,9 +799,24 @@ public class ControleFluxo6 {
 ---
 
 
-## <a name="parte19"></a>
+## <a name="parte19">Aula 18: Arrays parte 1</a>
 
+```java
+public class Arrays1 {
+    public static void main(String[] args) {
+        int[] idades = new int[3];
+        idades[0] = 10;
+        idades[1] = 1;
+        idades[2] = 30;
 
+        System.out.println("Idade " + idades[0]);
+        System.out.println("Idade " + idades[1]);
+        System.out.println("Idade " + idades[2]);
+    }
+
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
