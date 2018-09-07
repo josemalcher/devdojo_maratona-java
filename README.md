@@ -1310,3 +1310,290 @@ public class CalculadoraTest {
 ---
 
 
+## <a name="parte32">Aula 31: Métodos com parâmetros tipo reference pt 01</a>
+
+```java
+package br.com.abc.javacore.introducaoMetodos.classes;
+
+public class Calculadora {
+
+    public void somaDoisNumeros() {
+        System.out.println(5 + 5);
+    }
+
+    public void subtraiDoisNumeros() {
+        System.out.println(5 - 5);
+    }
+
+    public void multiplicaDoisNumero(double num1, int num2) {
+        System.out.println(num1 * num2);
+    }
+
+    public double divideDoisNumeros(double num1, double num2) {
+        if(num2 != 0){
+            return num1 / num2;
+        }
+        return 0;
+    }
+    public void imprimeDoisNumerosDivididos(double num1, double num2) {
+        if(num2 != 0){
+            System.out.println(num1/num2);
+            return; // funciona como um bream em métodos void
+        }
+        System.out.println("Não é possível dividir por 0");
+    }
+    public void alteraDoisNumeros(int a, int b){
+        a = 20;
+        b = 30;
+        System.out.println("Dentro do método alteraDoisNumeros");
+        System.out.println("num 1 = " + a);
+        System.out.println("num 2 = " + b);
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.testes;
+
+import br.com.abc.javacore.introducaoMetodos.classes.Calculadora;
+
+public class ParametrosTest {
+    public static void main(String[] args) {
+        Calculadora calcu = new Calculadora();
+        int num1 = 100;
+        int num2 = 500;
+
+        calcu.alteraDoisNumeros(num1, num2);
+
+        System.out.println("Dentro do método Principal de Teste");
+        System.out.println("num1 = "+ num1);
+        System.out.println("num2 = "+ num2);
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.classes;
+
+public class Professor {
+    public String nome;
+    public String matricula;
+    public Integer rg;
+    public String cpf;
+
+    public void imprime(Professor prof){
+        System.out.println(this.nome);
+        System.out.println(this.matricula);
+        System.out.println(this.cpf);
+        System.out.println(this.rg);
+    }
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.testes;
+
+import br.com.abc.javacore.introducaoMetodos.classes.Professor;
+
+public class ProfessorTest {
+    public static void main(String[] args) {
+        Professor prof1 = new Professor();
+        prof1.nome = "jose";
+        prof1.matricula = "123";
+        prof1.rg = 321;
+        prof1.cpf = "123.123.123-55";
+
+        Professor prof2 = new Professor();
+        prof2.nome = "Mario";
+        prof2.matricula = "222";
+        prof2.rg = 314;
+        prof2.cpf = "321.321.122-11";
+
+        prof1.imprime(prof1);
+        prof1.imprime(prof2);
+
+        /*
+        System.out.println(prof1.nome);
+        System.out.println(prof1.matricula);
+        System.out.println(prof1.cpf);
+        System.out.println(prof1.rg);
+
+        System.out.println(prof2.nome);
+        System.out.println(prof2.matricula);
+        System.out.println(prof2.cpf);
+        System.out.println(prof2.rg);
+        */
+    }
+}
+
+```
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte33"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte34"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte35"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+
+## <a name="parte36"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte37"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte38"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte39"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte40"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte41"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte42"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte43"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte44"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte45"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte46"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte47"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte48"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte49"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte50"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte51"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+

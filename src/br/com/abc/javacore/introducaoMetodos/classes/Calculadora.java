@@ -27,4 +27,11 @@ public class Calculadora {
         }
         System.out.println("Não é possível dividir por 0");
     }
+    public void alteraDoisNumeros(int a, int b){
+        a = 20;
+        b = 30;
+        System.out.println("Dentro do método alteraDoisNumeros");
+        System.out.println("num 1 = " + a);
+        System.out.println("num 2 = " + b);
+    }
 }
