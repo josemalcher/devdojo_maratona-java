@@ -15,8 +15,8 @@
 - [Aula 05: Tipos primitivos, convenções de código e comentários](#parte6)
 - [Aula 06: Continuação tipos primitivos, exercício e operadores](#parte7)
 - [Aula 07: Operador resto e operadores de comparação](#parte8)
-- [Aula 08: com.devdojo.introducao.Operadores Lógicos](#parte9)
-- [Aula 09: com.devdojo.introducao.Operadores de Atribuição](#parte10)
+- [Aula 08: com.devdojo.introducao.br.com.abc.introducao.operadores.Operadores Lógicos](#parte9)
+- [Aula 09: com.devdojo.introducao.br.com.abc.introducao.operadores.Operadores de Atribuição](#parte10)
 - [Aula 10: Controle de fluxo if, else if e else](#parte11)
 - [Aula 11: Controle de fluxo: Tabela verdade e mais.](#parte12)
 - [Aula 12: Controle de fluxo Resolução do exercício if else](#parte13)
@@ -342,10 +342,10 @@ public class RelatorioPendenci {
 
 ```
 
-Operadores
+br.com.abc.introducao.operadores.Operadores
 
 ```java
-public class Operadores {
+public class br.com.abc.introducao.operadores.Operadores {
     public static void main(String[] args) {
         int numero1 = 10;
         int numero2 = 20;
@@ -368,7 +368,7 @@ public class Operadores {
 - https://www.youtube.com/watch?v=GRAKRcbzEpo
 
 ```java
-public class Operadores {
+public class br.com.abc.introducao.operadores.Operadores {
     public static void main(String[] args) {
         System.out.println("Resto da divisão = " + (21 % 2));
     }
@@ -377,7 +377,7 @@ public class Operadores {
 ```
 
 ```java
-public class OperadoresComparacao {
+public class br.com.abc.introducao.operadores.OperadoresComparacao {
     public static void main(String[] args) {
         boolean dezMaiorQueVinte = 10 > 20;
         boolean dezMenorQueVinte = 10 < 20;
@@ -398,12 +398,12 @@ public class OperadoresComparacao {
 
 ---
 
-## <a name="parte9">Aula 08: Operadores Lógicos</a>
+## <a name="parte9">Aula 08: br.com.abc.introducao.operadores.Operadores Lógicos</a>
 
 - https://www.youtube.com/watch?v=8dlThWq56DM
 
 ```java
-public class OperadoresLogicos {
+public class br.com.abc.introducao.operadores.OperadoresLogicos {
     public static void main(String[] args) {
         int idade = 18;
         float salario = 2000f;
@@ -420,12 +420,12 @@ public class OperadoresLogicos {
 
 ---
 
-## <a name="parte10">Aula 09: Operadores de Atribuição</a>
+## <a name="parte10">Aula 09: br.com.abc.introducao.operadores.Operadores de Atribuição</a>
 
 - https://www.youtube.com/watch?v=hp1iYAoywc8
 
 ```java
-public class OperadoresAtribuicao {
+public class br.com.abc.introducao.operadores.OperadoresAtribuicao {
     public static void main(String[] args) {
         // = , -= , += , /= , %=
 
@@ -453,7 +453,7 @@ public class OperadoresAtribuicao {
 - https://www.youtube.com/watch?v=JwNYr5HBYkI
 
 ```java
-public class ControleFluxo1 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo1 {
     public static void main(String[] args) {
         // idade < 15 categoria infantil
         // idade >= 15 && idade < 18 juvenil
@@ -481,7 +481,7 @@ public class ControleFluxo1 {
 ## <a name="parte12">Aula 11: Controle de fluxo: Tabela verdade e mais</a>
 
 ```java
-public class ControleFluxo2 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo2 {
     public static void main(String[] args) {
         int idade = 15;
         String status;
@@ -499,7 +499,7 @@ public class ControleFluxo2 {
 ## <a name="parte13">Aula 12: Controle de fluxo Resolução do exercício if else</a>
 
 ```java
-public class ExercicioControleFluxo {
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo {
     public static void main(String[] args) {
         /*
          * Crie uma variável salario e imprima seu imposto
@@ -535,7 +535,7 @@ public class ExercicioControleFluxo {
 ## <a name="parte14">Aula 13: Controle de fluxo switch e exercícios</a>
 
 ```java
-public class ControleFluxo3 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo3 {
     public static void main(String[] args) {
         byte dia = 2;
         switch (dia) {
@@ -570,7 +570,7 @@ public class ControleFluxo3 {
 ```
 
 ```java
-public class ExercicioControleFluxo3 {
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo3 {
     /*  Crie um switch que dado um valor de 1 a 7
     *   considerando 1 domingo imprima se é dia util ou dia de semana 
     */
@@ -585,7 +585,7 @@ public class ExercicioControleFluxo3 {
 ## <a name="parte15">Aula 14: Controle de fluxo - Solução do exercício</a>
 
 ```java
-public class ExercicioControleFluxo3 {
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo3 {
     /*  Crie um switch que dado um valor de 1 a 7
      *   considerando 1 domingo imprima se é dia util ou dia de semana
      **/
@@ -617,7 +617,7 @@ public class ExercicioControleFluxo3 {
 ```java
 import java.util.Scanner;
 
-public class ExercicioControleFluxo31 {
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo31 {
     static void show(String mensagem) {
         System.out.printf(mensagem + "\n");
     }
@@ -667,7 +667,7 @@ public class ExercicioControleFluxo31 {
 ## <a name="parte16">Aula 15: Controle de fluxo for, while, do while</a>
 
 ```java
-public class ControleFluxo04 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo04 {
     public static void main(String[] args) {
         int contador = 9;
 
@@ -694,10 +694,10 @@ public class ControleFluxo04 {
 ## <a name="parte17">Aula 16: Exercício estrutura de repetição</a>
 
 
-- ControleFluxo04.java 
+- br.com.abc.introducao.controlefluxo.ControleFluxo04.java 
 
 ```java
-public class ControleFluxo04 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo04 {
     public static void main(String[] args) {
         int contador = 9;
 
@@ -719,10 +719,10 @@ public class ControleFluxo04 {
 }
 
 ```
-- ExercicioControleFluxo4.java
+- br.com.abc.introducao.controlefluxo.ExercicioControleFluxo4.java
 
 ```java
-public class ExercicioControleFluxo4 {
+public class br.com.abc.introducao.controlefluxo.ExercicioControleFluxo4 {
 
     public static void main(String[] args) {
         // imprima todos os numero pares de 0 até 100000
@@ -747,10 +747,10 @@ public class ExercicioControleFluxo4 {
 ## <a name="parte18">Aula 17: Comando break and continue</a>
 
 
-- ControleFluxo5.java
+- br.com.abc.introducao.controlefluxo.ControleFluxo5.java
 
 ```java
-public class ControleFluxo5 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo5 {
     public static void main(String[] args) {
         /* Dado um valor de um carro, descubra em quantas vezes ele pode ser parcelado
          * Porém as parcelas não podem ser menores do que 1.000 */
@@ -770,10 +770,10 @@ public class ControleFluxo5 {
 
 ```
 
-- ControleFluxo6.java
+- br.com.abc.introducao.controlefluxo.ControleFluxo6.java
 
 ```java
-public class ControleFluxo6 {
+public class br.com.abc.introducao.controlefluxo.ControleFluxo6 {
     public static void main(String[] args) {
         /* Dado um valor de um carro, descubra em quantas vezes ele pode ser parcelado
          * Porém as parcelas não podem ser menores do que 1.000 */
@@ -802,7 +802,7 @@ public class ControleFluxo6 {
 ## <a name="parte19">Aula 18: Arrays parte 1</a>
 
 ```java
-public class Arrays1 {
+public class br.com.abc.introducao.arrays.Arrays1 {
     public static void main(String[] args) {
         int[] idades = new int[3];
         idades[0] = 10;
@@ -825,7 +825,7 @@ public class Arrays1 {
 ## <a name="parte20">Aula 19: Arrays parte 2</a>
 
 ```java
-public class Arrays2 {
+public class br.com.abc.introducao.arrays.Arrays2 {
     public static void main(String[] args) {
         // byte, short, int, long, float, double = 0
         // char '\u0000' = ' '
@@ -853,7 +853,7 @@ public class Arrays2 {
 ## <a name="parte21">Aula 20: Arrays parte 3 foreach</a>
 
 ```java
-public class Arrays3 {
+public class br.com.abc.introducao.arrays.Arrays3 {
     public static void main(String[] args) {
         int[] numeros = new int[5];
         int[] numeros1 = {1,2,3,4,5}; // tam = 5, index = 0 até 4
@@ -873,7 +873,7 @@ public class Arrays3 {
 ```
 
 ```java
-public class Arrays4 {
+public class br.com.abc.introducao.arrays.Arrays4 {
     public static void main(String[] args) {
         String[] nomes = {"jose", "luciana", "Barbosa"};
         for(String nome : nomes){
@@ -891,7 +891,7 @@ public class Arrays4 {
 ## <a name="parte22">Aula 21: Arrays parte 4 arrays multidimensionais</a>
 
 ```java
-public class Arrays5 {
+public class br.com.abc.introducao.arrays.Arrays5 {
     public static void main(String[] args) {
         int[][] dias = new int[2][2];
         dias[0][0] = 30;
@@ -926,7 +926,7 @@ public class Arrays5 {
 ## <a name="parte23">Aula 22: Arrays parte 5 arrays multidimencionais</a>
 
 ```java
-public class Arrays6 {
+public class br.com.abc.introducao.arrays.Arrays6 {
     public static void main(String[] args) {
         int[] arrInt = {1,2,3};
         int[] arrInt2 = new int[3];
@@ -957,7 +957,8 @@ public class Arrays6 {
 
 ---
 
-## <a name="parte24"></a>
+## <a name="parte24">Aula 23: Introdução a pacotes</a>
+
 
 
 
