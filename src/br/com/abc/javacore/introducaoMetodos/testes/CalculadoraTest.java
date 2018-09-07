@@ -8,6 +8,7 @@ public class CalculadoraTest {
         calc.somaDoisNumeros();
         System.out.println("Continua...");
         calc.subtraiDoisNumeros();
+        calc.multiplicaDoisNumero(2.2, 100);
         System.out.println("fim!");
     }
 }

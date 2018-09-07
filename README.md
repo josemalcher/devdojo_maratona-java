@@ -1139,9 +1139,45 @@ public class CalculadoraTest {
 
 ---
 
-## <a name="parte29"></a>
+## <a name="parte29">Aula 28: Métodos com parâmetros</a>
 
+```java
+package br.com.abc.javacore.introducaoMetodos.classes;
 
+public class Calculadora {
+
+    public void somaDoisNumeros() {
+        System.out.println(5 + 5);
+    }
+
+    public void subtraiDoisNumeros() {
+        System.out.println(5 - 5);
+    }
+
+    public void multiplicaDoisNumero(double num1, int num2) {
+        System.out.println(num1 * num2);
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.testes;
+
+import br.com.abc.javacore.introducaoMetodos.classes.Calculadora;
+
+public class CalculadoraTest {
+    public static void main(String[] args) {
+        Calculadora calc = new Calculadora();
+        calc.somaDoisNumeros();
+        System.out.println("Continua...");
+        calc.subtraiDoisNumeros();
+        calc.multiplicaDoisNumero(2.2, 100);
+        System.out.println("fim!");
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
