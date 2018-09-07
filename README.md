@@ -1239,9 +1239,71 @@ public class CalculadoraTest {
 
 ---
 
-## <a name="parte31"></a>
+## <a name="parte31">Aula 30: Retorno de métodos parte 02</a>
 
+```java
+package br.com.abc.javacore.introducaoMetodos.classes;
 
+public class Calculadora {
+
+    public void somaDoisNumeros() {
+        System.out.println(5 + 5);
+    }
+
+    public void subtraiDoisNumeros() {
+        System.out.println(5 - 5);
+    }
+
+    public void multiplicaDoisNumero(double num1, int num2) {
+        System.out.println(num1 * num2);
+    }
+
+    public double divideDoisNumeros(double num1, double num2) {
+        if(num2 != 0){
+            return num1 / num2;
+        }
+        return 0;
+    }
+    public void imprimeDoisNumerosDivididos(double num1, double num2) {
+        if(num2 != 0){
+            System.out.println(num1/num2);
+            return; // funciona como um bream em métodos void
+        }
+        System.out.println("Não é possível dividir por 0");
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.testes;
+
+import br.com.abc.javacore.introducaoMetodos.classes.Calculadora;
+
+public class CalculadoraTest {
+    public static void main(String[] args) {
+        Calculadora calc = new Calculadora();
+        System.out.println("Soma");
+        calc.somaDoisNumeros();
+        System.out.println("Subatração");
+        calc.subtraiDoisNumeros();
+        System.out.println("Multiplicação");
+        calc.multiplicaDoisNumero(2.2, 100);
+
+        System.out.println("Divisão");
+        double result = calc.divideDoisNumeros(10,2);
+        System.out.println(result);
+        System.out.println(calc.divideDoisNumeros(20,2));
+
+        System.out.println("Divisão");
+        calc.imprimeDoisNumerosDivididos(10,2);
+        calc.imprimeDoisNumerosDivididos(10,0);
+
+        System.out.println("fim!");
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 

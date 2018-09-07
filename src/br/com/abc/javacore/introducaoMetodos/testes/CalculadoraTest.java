@@ -17,6 +17,10 @@ public class CalculadoraTest {
         System.out.println(result);
         System.out.println(calc.divideDoisNumeros(20,2));
 
+        System.out.println("Divisão");
+        calc.imprimeDoisNumerosDivididos(10,2);
+        calc.imprimeDoisNumerosDivididos(10,0);
+
         System.out.println("fim!");
     }
 }
