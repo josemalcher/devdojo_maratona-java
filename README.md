@@ -966,9 +966,29 @@ public class br.com.abc.introducao.arrays.Arrays6 {
 
 ---
 
-## <a name="parte25"></a>
+## <a name="parte25">Aula 24: Introdução a classes parte 1</a>
 
+```java
+package br.com.abc.javacore.introducaoclassestest;
 
+import br.com.abc.javacore.introducaoclasses.Estudante;
+
+public class EstudanteTest {
+    public static void main(String[] args) {
+        Estudante jose = new Estudante();
+
+        jose.nome = "José Malcher";
+        jose.matricula = "201901";
+        jose.idade = 34;
+
+        System.out.println(jose.nome);
+        System.out.println(jose.matricula);
+        System.out.println(jose.idade);
+
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
