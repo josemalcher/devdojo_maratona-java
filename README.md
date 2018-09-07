@@ -850,9 +850,39 @@ public class Arrays2 {
 
 ---
 
-## <a name="parte21"></a>
+## <a name="parte21">Aula 20: Arrays parte 3 foreach</a>
 
+```java
+public class Arrays3 {
+    public static void main(String[] args) {
+        int[] numeros = new int[5];
+        int[] numeros1 = {1,2,3,4,5}; // tam = 5, index = 0 até 4
+        int[] numweoa3 = new int[]{1,2,3,4,5};
 
+        for(int i = 0; i< numeros1.length; i++){
+            System.out.println(numeros1[i]);
+        }
+
+        for (int num : numweoa3) {
+            System.out.println(num);
+        }
+
+    }
+}
+
+```
+
+```java
+public class Arrays4 {
+    public static void main(String[] args) {
+        String[] nomes = {"jose", "luciana", "Barbosa"};
+        for(String nome : nomes){
+            System.out.println(nome);
+        }
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
