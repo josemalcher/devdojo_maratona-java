@@ -969,9 +969,21 @@ public class br.com.abc.introducao.arrays.Arrays6 {
 ## <a name="parte25">Aula 24: Introdução a classes parte 1</a>
 
 ```java
-package br.com.abc.javacore.introducaoclassestest;
+package br.com.abc.javacore.introducaoclasses.classes;
 
-import br.com.abc.javacore.introducaoclasses.Estudante;
+public class Estudante {
+    public String nome;
+    public String matricula;
+    public int idade;
+
+}
+
+
+```
+```java
+package br.com.abc.javacore.introducaoclasses.testes;
+
+import br.com.abc.javacore.introducaoclasses.classes.Estudante;
 
 public class EstudanteTest {
     public static void main(String[] args) {
