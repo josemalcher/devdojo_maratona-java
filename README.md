@@ -1530,8 +1530,11 @@ public class ProfessorTest {
 ---
 
 
-## <a name="parte35"></a>
+## <a name="parte35">Aula 34: Introdução a UML</a>
 
+- http://www.agilemodeling.com/essays/umlDiagrams.htm
+
+- https://www.devmedia.com.br/orientacoes-basicas-na-elaboracao-de-um-diagrama-de-classes/37224
 
 [Voltar ao Índice](#indice)
 
