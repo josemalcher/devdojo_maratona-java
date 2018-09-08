@@ -16,8 +16,8 @@ public class ProfessorTest {
         prof2.rg = 314;
         prof2.cpf = "321.321.122-11";
 
-        prof1.imprime(prof1);
-        prof1.imprime(prof2);
+        prof1.imprime();
+        prof2.imprime();
 
         /*
         System.out.println(prof1.nome);

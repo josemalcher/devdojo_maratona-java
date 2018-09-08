@@ -6,7 +6,7 @@ public class Professor {
     public Integer rg;
     public String cpf;
 
-    public void imprime(Professor prof){
+    public void imprime(){
         System.out.println(this.nome);
         System.out.println(this.matricula);
         System.out.println(this.cpf);
