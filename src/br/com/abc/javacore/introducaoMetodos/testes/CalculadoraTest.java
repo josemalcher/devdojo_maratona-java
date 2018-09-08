@@ -22,5 +22,12 @@ public class CalculadoraTest {
         calc.imprimeDoisNumerosDivididos(10,0);
 
         System.out.println("fim!");
+        System.out.println("Var Args");
+
+        int[] numeros = {1,2,3,4,5};
+        calc.somaArray(numeros);
+        calc.somaVarArgs(1,2,3,4,5);
+
+
     }
 }

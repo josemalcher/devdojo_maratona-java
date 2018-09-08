@@ -1494,7 +1494,35 @@ public class ProfessorTest {
 
 
 
-## <a name="parte34"></a>
+## <a name="parte34">Aula 33: Passagem de parâmetros varargs</a>
+
+```java
+    public void somaArray(int[] numeros) {
+        int soma = 0;
+        for (int num : numeros) {
+            soma += num;
+        }
+        System.out.println(soma);
+    }
+
+    //public void somaVarArgs(String valorDouble, int... numeros) {
+    public void somaVarArgs(int... numeros) {
+        int soma = 0;
+        for (int num : numeros) {
+            soma += num;
+        }
+        System.out.println(soma);
+    }
+```
+
+```java
+ System.out.println("Var Args");
+
+        int[] numeros = {1,2,3,4,5};
+        calc.somaArray(numeros);
+        calc.somaVarArgs(1,2,3,4,5);
+
+```
 
 
 [Voltar ao Índice](#indice)
