@@ -1543,7 +1543,69 @@ public class ProfessorTest {
 
 
 
-## <a name="parte36"></a>
+## <a name="parte36"> Aula 35: Exercício sobre métodos</a>
+
+q) Crie uma classe estudante com os seguintes atributos: nome, idade, notas (três notas)
+Crie um métod opara imprimir os dados e tirar a média desse aluno,
+caso a média seja maior que 6, imprimir aprovado, senão reprovado.
+
+```java
+package br.com.abc.javacore.introducaoMetodos.classes;
+
+public class Estudante {
+    public String nome;
+    public int idade;
+    public double[] notas;
+
+    public void print(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        if(notas != null){
+            for (double nota: notas) {
+                System.out.println("Notas: " + nota);
+            }
+        }
+    }
+
+    public void calcMedia(){
+        if(notas == null){
+            System.out.println("Esse aluno não possuí notas!!");
+            return;
+        }
+        double media = 0;
+        for (double nota : notas){
+            media = media + nota; // media += nota
+        }
+
+        media = media / notas.length;
+
+        if(media > 6){
+            System.out.println("A média é: "+media+"   !!! APROVADO !!!");
+        }else{
+            System.out.println("A média é: "+media+" ...RERPROVADO!");
+        }
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.testes;
+
+import br.com.abc.javacore.introducaoMetodos.classes.Estudante;
+
+public class EstudanteTest {
+    public static void main(String[] args) {
+        Estudante estudante = new Estudante();
+        estudante.nome =  "José Malcher JR;";
+        estudante.idade = 34;
+        //estudante.notas = new double[]{5,5,4.1};
+        estudante.print();
+        estudante.calcMedia();
+    }
+}
+
+```
 
 
 [Voltar ao Índice](#indice)
