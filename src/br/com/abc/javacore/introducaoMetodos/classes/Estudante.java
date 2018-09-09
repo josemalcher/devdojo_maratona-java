@@ -4,6 +4,7 @@ public class Estudante {
     private String nome;
     private int idade;
     private double[] notas;
+    private boolean situacao;
 
     public void print(){
         System.out.println("Nome: " + this.getNome());
@@ -28,8 +29,10 @@ public class Estudante {
         media = media / getNotas().length;
 
         if(media > 6){
+            situacao = true;
             System.out.println("A média é: "+media+"   !!! APROVADO !!!");
         }else{
+            situacao = false;
             System.out.println("A média é: "+media+" ...RERPROVADO!");
         }
     }
@@ -58,4 +61,12 @@ public class Estudante {
     public void setNotas(double[] notas) {
         this.notas = notas;
     }
+
+    public boolean isSituacao() {
+        return situacao;
+    }
+
+//    public void setSituacao(boolean situacao) {
+//        this.situacao = situacao;
+//    }
 }

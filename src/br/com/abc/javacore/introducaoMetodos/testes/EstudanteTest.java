@@ -10,5 +10,8 @@ public class EstudanteTest {
         estudante.setNotas(new double[]{5,10,4.1});
         estudante.print();
         estudante.calcMedia();
+        estudante.calcMedia();
+        System.out.println("APROVADO: " + estudante.isSituacao());
+
     }
 }
