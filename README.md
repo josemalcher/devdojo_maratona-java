@@ -1614,7 +1614,90 @@ public class EstudanteTest {
 
 
 
-## <a name="parte37"></a>
+## <a name="parte37">Aula 36: Modificador de acesso private, get e set pt 01</a>
+
+```java
+package br.com.abc.javacore.introducaoMetodos.classes;
+
+public class Estudante {
+    private String nome;
+    private int idade;
+    private double[] notas;
+
+    public void print(){
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Idade: " + this.getIdade());
+        if(getNotas() != null){
+            for (double nota: getNotas()) {
+                System.out.println("Notas: " + nota);
+            }
+        }
+    }
+
+    public void calcMedia(){
+        if(getNotas() == null){
+            System.out.println("Esse aluno não possuí notas!!");
+            return;
+        }
+        double media = 0;
+        for (double nota : getNotas()){
+            media = media + nota; // media += nota
+        }
+
+        media = media / getNotas().length;
+
+        if(media > 6){
+            System.out.println("A média é: "+media+"   !!! APROVADO !!!");
+        }else{
+            System.out.println("A média é: "+media+" ...RERPROVADO!");
+        }
+    }
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double[] getNotas() {
+        return notas;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.introducaoMetodos.testes;
+
+import br.com.abc.javacore.introducaoMetodos.classes.Estudante;
+
+public class EstudanteTest {
+    public static void main(String[] args) {
+        Estudante estudante = new Estudante();
+        estudante.setNome("José Malcher JR");
+        estudante.setIdade(34);
+        estudante.setNotas(new double[]{5,10,4.1});
+        estudante.print();
+        estudante.calcMedia();
+    }
+}
+
+```
 
 
 [Voltar ao Índice](#indice)
