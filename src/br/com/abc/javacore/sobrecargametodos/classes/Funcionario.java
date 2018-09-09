@@ -6,15 +6,24 @@ public class Funcionario {
     private double salario;
     private String rg;
 
-    public void init(String nome, String cpf, double salario){
+    public Funcionario() {
+    }
+
+    public Funcionario(String nome, String cpf, double salario, String rg) {
         this.nome = nome;
         this.cpf = cpf;
         this.salario = salario;
-    }
-    public void init(String nome, String cpf, double salario, String rg){
-        init(nome, cpf, salario);
         this.rg = rg;
     }
+    //    public void init(String nome, String cpf, double salario){
+//        this.nome = nome;
+//        this.cpf = cpf;
+//        this.salario = salario;
+//    }
+//    public void init(String nome, String cpf, double salario, String rg){
+//        init(nome, cpf, salario);
+//        this.rg = rg;
+//    }
 
     public void imprime(){
         System.out.println(this.nome);
