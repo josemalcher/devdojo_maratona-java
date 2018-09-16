@@ -5,7 +5,8 @@ public class Carro {
 
     private String nome;
     private double velocidadeMaxima;
-    public static double velocidadeLimite = 240;
+
+    private static double velocidadeLimite = 240;
 
     public Carro(String nome, double velocidadeMaxima) {
         this.nome = nome;
@@ -28,14 +29,14 @@ public class Carro {
         this.velocidadeMaxima = velocidadeMaxima;
     }
 
-    // Não pode em static
-    /*public double getVelocidadeLimite() {
+    /* Métodos estáticos */
+    public static double getVelocidadeLimite() {
         return velocidadeLimite;
     }
-
-    public void setVelocidadeLimite(double velocidadeLimite) {
-        this.velocidadeLimite = velocidadeLimite;
-    }*/
+    /* Métodos estáticos */
+    public static void setVelocidadeLimite(double velocidadeLimite) {
+        Carro.velocidadeLimite = velocidadeLimite;
+    }
 
     public void imprime(){
         System.out.println("--------------------------------------------");
