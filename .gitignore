@@ -165,7 +165,7 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 ### Java template
-# Compiled class file
+# Compiled classes file
 *.class
 
 # Log file
