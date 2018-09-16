@@ -2453,7 +2453,19 @@ public class Endereco {
 ---
 
 
-## <a name="parte47"></a>
+## <a name="parte47">Aula 46 Exercício associação pt 01</a>
+
+Crie um sistema que gerencie seminários  
+- Deverá cadastrar seminários, cadastrar os alunos, cadastrar professores e cadastrar locais    
+    - Um aluno poderá estar em apenas um seminário  
+    - Um seminário poderá ter nenhum ou varios alunos  
+    - um professor poderá minitrar um ou vários seminários  
+    - um Seminário so poderá ter um professor  
+    - um seminário deverá ter um local  
+- Seminário: titulo  
+- Aluno: nome e idade  
+- Professor: nome e especialidade  
+- Local: Rua e Bairro  
 
 
 [Voltar ao Índice](#indice)
