@@ -2412,7 +2412,40 @@ Exibindo quantidade de parcelas possíveis
 ---
 
 
-## <a name="parte46"></a>
+## <a name="parte46">Aula 45  UML e Associação de classes</a>
+
+```java
+package br.com.abc.javacore.associacao;
+
+public class Pessoa {
+    private Departamento departamento;
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.associacao;
+
+public class Departamento {
+    private Pessoa[] pessoas;
+}
+
+```
+
+```java
+package br.com.abc.javacore.associacao;
+
+public class Endereco {
+
+    private String rua;
+    private String cep;
+    
+    //private Pessoa[] pessoas;
+    // Não "amarra" a classe pessoa a endereço
+}
+
+```
 
 
 [Voltar ao Índice](#indice)
