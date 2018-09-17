@@ -2473,8 +2473,9 @@ Crie um sistema que gerencie seminários
 ---
 
 
-## <a name="parte48"></a>
+## <a name="parte48">Aula 47 Exercício associação pt 02</a>
 
+![resolução](https://github.com/josemalcher/devdojo_maratona-java/blob/master/img/Aula%2047%20Exerc%C3%ADcio%20associa%C3%A7%C3%A3o%20pt%2002.png?raw=true)
 
 [Voltar ao Índice](#indice)
 
