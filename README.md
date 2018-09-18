@@ -2775,7 +2775,299 @@ Process finished with exit code 0
 ---
 
 
-## <a name="parte51"></a>
+## <a name="parte51">Aula 50  Herança pt 01</a>
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class Pessoa {
+    private String nome;
+    private String cpf;
+    private Endereco endereco;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void imprime(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Rua : " + this.endereco.getRua());
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class Funcionario extends Pessoa{
+    private double salario;
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class Endereco {
+    private String rua;
+    private String bairro;
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class HerancaTest {
+    public static void main(String[] args) {
+        Pessoa p = new Pessoa();
+        Endereco end = new Endereco();
+        p.setNome("Jose");
+        p.setCpf("789");
+        end.setRua("Rua Tal");
+        end.setBairro("Marco");
+        p.setEndereco(end);
+        p.imprime();
+
+        System.out.println("------------------");
+
+        Funcionario f = new Funcionario();
+        f.setNome("Jose Funcionario");
+        f.setCpf("916");
+        f.setSalario(3000.00);
+        f.setEndereco(end);
+        f.imprime();
+    }
+}
+
+```
+
+```
+Nome: Jose
+CPF: 789
+Rua : Rua Tal
+------------------
+Nome: Jose Funcionario
+CPF: 916
+Rua : Rua Tal
+
+```
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte52"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte53"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte54"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte55"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte56"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte57"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte58"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte59"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte60"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte61"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte62"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte63"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte64"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte65"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte66"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte67"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte68"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte69"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+
+## <a name="parte70"></a>
 
 
 [Voltar ao Índice](#indice)
