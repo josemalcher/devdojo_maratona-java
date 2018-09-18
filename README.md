@@ -2905,8 +2905,30 @@ Rua : Rua Tal
 
 
 
-## <a name="parte52"></a>
+## <a name="parte52">Aula 51   Herança parte 2 e referência super</a>
 
+```java
+package br.com.abc.javacore.heranca;
+
+public class Funcionario extends Pessoa{
+    private double salario;
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public void imprime() {
+        super.imprime();
+        System.out.println("Salario: "+ this.salario);
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
