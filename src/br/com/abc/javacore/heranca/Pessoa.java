@@ -1,9 +1,9 @@
 package br.com.abc.javacore.heranca;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
 
     public String getNome() {
         return nome;

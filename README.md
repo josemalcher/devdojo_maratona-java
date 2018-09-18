@@ -2936,8 +2936,44 @@ public class Funcionario extends Pessoa{
 
 
 
-## <a name="parte53"></a>
+## <a name="parte53">Aula 52 Herança e Modificador Protected pt 03</a>
 
+```java
+public class Pessoa {
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+
+```
+
+```java
+public class Funcionario extends Pessoa{
+//(...)
+ @Override
+    public void imprime() {
+        super.imprime();
+        System.out.println("Salario: "+ this.salario);
+        imprimeReciboPagamento();
+    }
+
+    public void imprimeReciboPagamento(){
+        System.out.println("Eu " + super.getNome() + " Recebi "+ this.salario);
+    }
+//(...)
+}
+```
+
+```
+Nome: Jose
+CPF: 789
+Rua : Rua Tal
+------------------
+Nome: Jose Funcionario
+CPF: 916
+Rua : Rua Tal
+Salario: 3000.0
+Eu Jose Funcionario Recebi 3000.0
+```
 
 [Voltar ao Índice](#indice)
 
