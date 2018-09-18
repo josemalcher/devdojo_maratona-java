@@ -2482,15 +2482,292 @@ Crie um sistema que gerencie seminários
 ---
 
 
-## <a name="parte49"></a>
+## <a name="parte49">Aula 48 Exercício associação de classes pt 03</a>
 
+cont... próxima aula...
 
 [Voltar ao Índice](#indice)
 
 ---
 
 
-## <a name="parte50"></a>
+## <a name="parte50">Aula 49  Exercício associação pt 04</a>
+
+```java
+package br.com.abc.javacore.associacao.exercicio;
+
+public class Aluno {
+    private String nome;
+    private int idade;
+    private Seminario seminario;
+
+    public void print(){
+        System.out.println("----  RELATORIO ALUNO ---- ");
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        if(this.seminario != null){
+            System.out.println("Seminário Inscrito: " + this.seminario.getTitulo());
+        }else{
+            System.out.println("Aluno não está em nenum seminário");
+        }
+    }
+
+    public Aluno() {
+    }
+
+    public Aluno(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public Seminario getSeminario() {
+        return seminario;
+    }
+
+    public void setSeminario(Seminario seminario) {
+        this.seminario = seminario;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.associacao.exercicio;
+
+public class Professor {
+    private String nome;
+    private String especialidades;
+    private Seminario[] seminarios;
+
+    public void print(){
+        System.out.println("----  RELATORIO PROFESSOR ---- ");
+        System.out.println("Nome Professor: "+ this.nome);
+        System.out.println("Especialidade "+ this.especialidades);
+        System.out.println("Seminários: ");
+        if(seminarios != null && seminarios.length != 0){
+            for(Seminario sem: seminarios){
+                System.out.println(sem.getTitulo() + " ");
+            }
+            return;
+        }
+        System.out.println("Professor não vinculado a nenhum seminário");
+    }
+
+    public Professor() {
+    }
+
+    public Professor(String nome, String especialidades) {
+        this.nome = nome;
+        this.especialidades = especialidades;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getEspecialidades() {
+        return especialidades;
+    }
+
+    public void setEspecialidades(String especialidades) {
+        this.especialidades = especialidades;
+    }
+
+    public Seminario[] getSeminarios() {
+        return seminarios;
+    }
+
+    public void setSeminarios(Seminario[] seminarios) {
+        this.seminarios = seminarios;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.associacao.exercicio;
+
+public class Local {
+    private String rua;
+    private String bairro;
+
+    public void print(){
+        System.out.println("----  RELATORIO LOCAL ---- ");
+        System.out.println("Rua/Local: "+ this.rua);
+        System.out.println("Rua/Local: "+ this.bairro);
+    }
+
+    public Local() {
+    }
+
+    public Local(String rua, String bairro) {
+        this.rua = rua;
+        this.bairro = bairro;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.associacao.exercicio;
+
+public class Seminario {
+    private String titulo;
+    private Aluno[] alunos;
+    private Professor professor;
+    private Local local;
+
+    public void print() {
+        System.out.println("----  RELATORIO SEMINARIO ---- ");
+        System.out.println("Título: " + this.titulo);
+        System.out.println("Professor palestrante " + this.getProfessor().getNome());
+
+        if (this.local != null) {
+            System.out.println("Local: " + this.local.getRua() + " Bairro: " + this.local.getBairro());
+        } else {
+            System.out.println("Não há local o Evento!");
+        }
+
+        if (alunos != null && alunos.length != 0) {
+            System.out.println("ALunos: ");
+            for (Aluno aluno : alunos) {
+                System.out.println(aluno.getNome());
+            }
+            return;
+        }
+        System.out.println("Nenhum aluno cadastrado");
+    }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public Aluno[] getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(Aluno[] alunos) {
+        this.alunos = alunos;
+    }
+
+    public Seminario() {
+    }
+
+    public Seminario(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Local getLocal() {
+        return local;
+    }
+
+    public void setLocal(Local local) {
+        this.local = local;
+    }
+}
+
+
+```
+
+```java
+package br.com.abc.javacore.associacao.exercicio;
+
+public class AssociacaoTeste {
+    public static void main(String[] args) {
+        Aluno aluno1 = new Aluno("Jose", 34);
+        Aluno aluno2 = new Aluno("Maria", 30);
+
+        Seminario sem = new Seminario("Como ser um programador melhor");
+
+        Professor prof = new Professor("Yoda", "JAVA MASTER STAR WARS");
+
+        Local local = new Local("Lua JAVA", "Via Lactea");
+
+        aluno1.setSeminario(sem);
+        aluno2.setSeminario(sem);
+
+        sem.setProfessor(prof);
+        sem.setLocal(local);
+        sem.setAlunos(new Aluno[]{aluno1, aluno2});
+
+        Seminario[] semArray = new Seminario[1];
+        semArray[0] = sem;
+        prof.setSeminarios(semArray);
+
+        sem.print();
+        prof.print();
+
+
+    }
+}
+
+
+```
+
+```
+----  RELATORIO SEMINARIO ---- 
+Título: Como ser um programador melhor
+Professor palestrante Yoda
+Local: Lua JAVA Bairro: Via Lactea
+ALunos: 
+Jose
+Maria
+----  RELATORIO PROFESSOR ---- 
+Nome Professor: Yoda
+Especialidade JAVA MASTER STAR WARS
+Seminários: 
+Como ser um programador melhor 
+
+Process finished with exit code 0
+```
 
 
 [Voltar ao Índice](#indice)
