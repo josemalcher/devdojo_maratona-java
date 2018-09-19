@@ -3838,7 +3838,124 @@ public class Vendedor extends Funcionario {
 
 
 
-## <a name="parte63"></a>
+## <a name="parte63">Aula 62   Interfaces pt 01</a>
+
+```java
+package br.com.abc.javacore.interfaces;
+
+public class Produto implements ITributavel, ITransportavel {
+    private String nome;
+    private double peso;
+    private double preco;
+    private double precoFinal;
+    private double valorFrete;
+
+    @Override
+    public void calcularImposto() {
+        this.precoFinal = this.preco + (this.preco * IMPOSTO);
+    }
+
+    @Override
+    public void calculaFrete() {
+        this.valorFrete = this.preco / peso * 0.1;
+    }
+
+    public Produto(String nome, double peso, double preco) {
+        this.nome = nome;
+        this.peso = peso;
+        this.preco = preco;
+
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public double getPrecoFinal() {
+        return precoFinal;
+    }
+
+    public double getValorFrete() {
+        return valorFrete;
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "nome='" + nome + '\'' +
+                ", peso=" + peso +
+                ", preco=" + preco +
+                ", precoFinal=" + precoFinal +
+                ", valorFrete=" + valorFrete +
+                '}';
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.interfaces;
+
+public interface ITransportavel {
+    public void calculaFrete();
+}
+
+```
+
+
+```java
+package br.com.abc.javacore.interfaces;
+
+public interface ITributavel {
+
+    // Atributos
+    //public static final double IMPOSTO = 0.2;
+    double IMPOSTO = 0.2;
+
+    // Métodos
+    //public abstract void calcularImposto();
+    void calcularImposto();
+}
+
+```
+
+```java
+package br.com.abc.javacore.interfaces;
+
+public class ProdutoTeste {
+    public static void main(String[] args) {
+        Produto p = new Produto("Notebook", 4, 2000);
+        p.calcularImposto();
+        p.calculaFrete();
+        System.out.println(p);
+    }
+}
+
+```
+
+```
+Produto{nome='Notebook', peso=4.0, preco=2000.0, precoFinal=2400.0, valorFrete=50.0}
+```
 
 
 [Voltar ao Índice](#indice)
