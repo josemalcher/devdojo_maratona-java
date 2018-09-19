@@ -1,6 +1,6 @@
 package br.com.abc.javacore.classesabstrata;
 
-public abstract class Funcionario {
+public abstract class Funcionario extends Pessoa{
     protected String nome;
     protected String clt;
     protected double salario;
@@ -50,5 +50,10 @@ public abstract class Funcionario {
                 ", clt='" + clt + '\'' +
                 ", salario=" + salario +
                 '}';
+    }
+
+    @Override
+    public void imprime() {
+        System.out.println("Dentro do FUNCIONARIO");
     }
 }

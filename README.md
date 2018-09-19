@@ -3750,8 +3750,87 @@ Funcionario{nome='Ana', clt='123-123', salario=2400.0}
 
 
 
-## <a name="parte62"></a>
+## <a name="parte62">Aula 61   Classes abstratas pt 02</a>
 
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public abstract class Pessoa {
+    protected String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public abstract void imprime();
+}
+
+```
+
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public class Gerente extends Funcionario {
+    public Gerente() {
+    }
+
+    public Gerente(String nome, String clt, double salario) {
+        super(nome, clt, salario);
+    }
+
+    @Override
+    public void calculaSalario() {
+        //super.calculaSalario();
+        this.salario = salario + (salario * 0.2);
+    }
+
+    @Override
+    public void imprime() {
+
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public class Vendedor extends Funcionario {
+
+    private double vendas;
+
+    @Override
+    public void calculaSalario() {
+        this.salario = salario + (vendas * 0.5);
+    }
+
+    public Vendedor() {
+    }
+
+    public Vendedor(String nome, String clt, double salario, double vendas) {
+        super(nome, clt, salario);
+        this.vendas = vendas;
+    }
+
+    public double getVendas() {
+        return vendas;
+    }
+
+    public void setVendas(double vendas) {
+        this.vendas = vendas;
+    }
+
+    @Override
+    public void imprime() {
+
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 

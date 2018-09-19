@@ -24,4 +24,9 @@ public class Vendedor extends Funcionario {
     public void setVendas(double vendas) {
         this.vendas = vendas;
     }
+
+    @Override
+    public void imprime() {
+
+    }
 }

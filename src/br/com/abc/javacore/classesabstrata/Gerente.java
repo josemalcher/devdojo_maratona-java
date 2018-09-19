@@ -13,4 +13,9 @@ public class Gerente extends Funcionario {
         //super.calculaSalario();
         this.salario = salario + (salario * 0.2);
     }
+
+    @Override
+    public void imprime() {
+
+    }
 }
