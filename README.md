@@ -3519,8 +3519,88 @@ Cliente{nome='Jose 2', tipo=PESSOA_JURIDICA, tipo Valor=2, tipo Nome=Pessoa Juri
 
 
 
-## <a name="parte60"></a>
+## <a name="parte60">Aula 59   Enumeração pt 03</a>
 
+As enum representam um conjunto fixo de valores, de uma forma mais ou menos autodocumentada. Tornam o código mais explícito, mais legível, e menos vulnerável a erros de programação.
+
+Uma alternativa comum, é usar-se String ou int para valores constantes. As enum trazem algumas vantagens em relação a estes tipos:
+
+- O compilador não permite erros tipográficos, como podem acontecer com literais de strings.
+
+- O compilador não permite valores que estejam fora do conjunto enumerado, que é uma consequência das enumerações serem tipos elas próprias.
+
+- Não é necessário escrever pré-condições, ou testes manuais, para assegurar que o argumento de um método está dentro da gama de valores aceite.
+
+- O invariante de tipo é gratuito, novamente porque as enumerações são tipos, e definem à partida os valores válidos.
+
+- Enumerações podem definir comportamento (métodos) para as suas constantes, como em qualquer classe habitual.
+
+- As constantes de uma enumeração podem especializar o seu comportamento: cada constante pode ter a sua própria definição de um método.
+
+- A máquina virtual dá garantias de thread safety ao carregar a enumeração.
+
+- Podem igualmente ser usadas em switch.
+
+FONTE: https://pt.stackoverflow.com/questions/7360/por-que-e-quando-usar-enum-em-java
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public enum TipoCliente {
+    PESSOA_FISICA(1, "Pessoa Física") , PESSOA_JURIDICA(2, "Pessoa Juridica"){
+        public String getId(){
+            return  "B"; //PESSOA_JURIDICA
+        }
+    };
+
+    private int tipo;
+    private String nome;
+
+    TipoCliente(int tipo, String nome) {
+        this.tipo = tipo;
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    // constant specific class body (corpo de classe especifico constante)
+
+    public String getId(){
+        return  "A";
+    }
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public class ClienteTest {
+    public static void main(String[] args) {
+        Cliente cliente = new Cliente("Jose", TipoCliente.PESSOA_FISICA, Cliente.TipoPagamento.AVISTA);
+        Cliente cliente2 = new Cliente("Jose 2", TipoCliente.PESSOA_JURIDICA, Cliente.TipoPagamento.APRAZO);
+        System.out.println(cliente);
+        System.out.println(cliente2);
+        System.out.println(TipoCliente.PESSOA_FISICA.getId());
+        System.out.println(TipoCliente.PESSOA_JURIDICA.getId());
+    }
+}
+
+```
+
+```
+Cliente{nome='Jose', tipo=PESSOA_FISICA, tipo Valor=1, tipo Nome=Pessoa Física, tipoPagamento=AVISTA}
+Cliente{nome='Jose 2', tipo=PESSOA_JURIDICA, tipo Valor=2, tipo Nome=Pessoa Juridica, tipoPagamento=APRAZO}
+A
+B
+```
 
 [Voltar ao Índice](#indice)
 

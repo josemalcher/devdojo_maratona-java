@@ -1,7 +1,11 @@
 package br.com.abc.javacore.exemploenum;
 
 public enum TipoCliente {
-    PESSOA_FISICA(1, "Pessoa Física") , PESSOA_JURIDICA(2, "Pessoa Juridica"); //sempre na primeira linha
+    PESSOA_FISICA(1, "Pessoa Física") , PESSOA_JURIDICA(2, "Pessoa Juridica"){
+        public String getId(){
+            return  "B"; //PESSOA_JURIDICA
+        }
+    };
 
     private int tipo;
     private String nome;
@@ -17,6 +21,12 @@ public enum TipoCliente {
 
     public int getTipo() {
         return tipo;
+    }
+
+    // constant specific class body (corpo de classe especifico constante)
+
+    public String getId(){
+        return  "A";
     }
 
 }
