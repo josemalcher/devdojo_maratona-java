@@ -3964,8 +3964,13 @@ Produto{nome='Notebook', peso=4.0, preco=2000.0, precoFinal=2400.0, valorFrete=5
 
 
 
-## <a name="parte64"></a>
+## <a name="parte64">Aula 63   Interfaces pt 02</a>
 
+https://pt.stackoverflow.com/questions/62885/quando-usar-interfaces
+
+na uml
+
+![interfaces](https://www.caelum.com.br/apostila-java-orientacao-objetos/images/interfaces/interface_autenticavel.png)
 
 [Voltar ao Índice](#indice)
 
