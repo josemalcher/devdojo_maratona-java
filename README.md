@@ -3181,8 +3181,61 @@ BLoco de inicialização - 2 - funcionario
 
 
 
-## <a name="parte56"></a>
+## <a name="parte56">Aula 55  Sobrescrita de métodos</a>
 
+```java
+package br.com.abc.javacore.sobreescrita;
+
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                '}';
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.sobreescrita;
+
+public class PessoaTest {
+    public static void main(String[] args) {
+        Pessoa p = new Pessoa();
+        p.setNome("Jose Malcher jr");
+        p.setIdade(34);
+        System.out.println(p);
+        System.out.println(p.toString());
+    }
+}
+
+```
+
+```
+Pessoa{nome='Jose Malcher jr', idade=34}
+Pessoa{nome='Jose Malcher jr', idade=34}
+```
 
 [Voltar ao Índice](#indice)
 
