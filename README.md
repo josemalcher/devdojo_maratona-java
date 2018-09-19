@@ -3417,8 +3417,101 @@ Cliente{nome='Jose', tipo=PESSOA_FISICA}
 
 
 
-## <a name="parte59"></a>
+## <a name="parte59">Aula 58 Enumeração pt 02</a>
 
+```java
+package br.com.abc.javacore.exemploenum;
+
+public class Cliente {
+    private String nome;
+    private TipoCliente tipo;
+    private TipoPagamento tipoPagamento;
+
+    enum TipoPagamento{
+        AVISTA, APRAZO;
+    }
+
+    public Cliente(String nome, TipoCliente tipo, TipoPagamento tipoPagamento) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.tipoPagamento = tipoPagamento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public TipoCliente getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoCliente tipo) {
+        this.tipo = tipo;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", tipo=" + tipo +
+                ", tipo Valor=" + tipo.getTipo() +
+                ", tipo Nome=" + tipo.getNome() +
+                ", tipoPagamento=" + tipoPagamento +
+                '}';
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public enum TipoCliente {
+    PESSOA_FISICA(1, "Pessoa Física") , PESSOA_JURIDICA(2, "Pessoa Juridica"); //sempre na primeira linha
+
+    private int tipo;
+    private String nome;
+
+    TipoCliente(int tipo, String nome) {
+        this.tipo = tipo;
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public class ClienteTest {
+    public static void main(String[] args) {
+        Cliente cliente = new Cliente("Jose", TipoCliente.PESSOA_FISICA, Cliente.TipoPagamento.AVISTA);
+        Cliente cliente2 = new Cliente("Jose 2", TipoCliente.PESSOA_JURIDICA, Cliente.TipoPagamento.APRAZO);
+        System.out.println(cliente);
+        System.out.println(cliente2);
+    }
+}
+
+```
+
+```
+Cliente{nome='Jose', tipo=PESSOA_FISICA, tipo Valor=1, tipo Nome=Pessoa Física, tipoPagamento=AVISTA}
+Cliente{nome='Jose 2', tipo=PESSOA_JURIDICA, tipo Valor=2, tipo Nome=Pessoa Juridica, tipoPagamento=APRAZO}
+```
 
 [Voltar ao Índice](#indice)
 
