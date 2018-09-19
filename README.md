@@ -3608,7 +3608,140 @@ B
 
 
 
-## <a name="parte61"></a>
+## <a name="parte61">Aula 60   Classes abstratas pt 01</a>
+
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public abstract class Funcionario {
+    protected String nome;
+    protected String clt;
+    protected double salario;
+
+    public Funcionario() {
+    }
+
+    public Funcionario(String nome, String clt, double salario) {
+        this.nome = nome;
+        this.clt = clt;
+        this.salario = salario;
+    }
+
+    public abstract void calculaSalario();
+    /*{
+        this.salario = salario + (salario * 0.1);
+    }*/
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getClt() {
+        return clt;
+    }
+
+    public void setClt(String clt) {
+        this.clt = clt;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", clt='" + clt + '\'' +
+                ", salario=" + salario +
+                '}';
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public class Gerente extends Funcionario {
+    public Gerente() {
+    }
+
+    public Gerente(String nome, String clt, double salario) {
+        super(nome, clt, salario);
+    }
+
+    @Override
+    public void calculaSalario() {
+        //super.calculaSalario();
+        this.salario = salario + (salario * 0.2);
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public class Vendedor extends Funcionario {
+
+    private double vendas;
+
+    @Override
+    public void calculaSalario() {
+        this.salario = salario + (vendas * 0.5);
+    }
+
+    public Vendedor() {
+    }
+
+    public Vendedor(String nome, String clt, double salario, double vendas) {
+        super(nome, clt, salario);
+        this.vendas = vendas;
+    }
+
+    public double getVendas() {
+        return vendas;
+    }
+
+    public void setVendas(double vendas) {
+        this.vendas = vendas;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.classesabstrata;
+
+public class FuncionarioTeste {
+    public static void main(String[] args) {
+        //Funcionario f = new Funcionario("Marcos", "2018", 2000);
+        Gerente g = new Gerente("Ana", "123-123", 2000);
+        Vendedor v = new Vendedor("Camila", "123", 2000, 5000);
+        //f.calculaSalario();
+        g.calculaSalario();
+        v.calculaSalario();
+        //System.out.println(f);
+        System.out.println(v);
+        System.out.println(g);
+    }
+}
+
+```
+
+```
+Funcionario{nome='Camila', clt='123', salario=4500.0}
+Funcionario{nome='Ana', clt='123-123', salario=2400.0}
+```
 
 
 [Voltar ao Índice](#indice)
