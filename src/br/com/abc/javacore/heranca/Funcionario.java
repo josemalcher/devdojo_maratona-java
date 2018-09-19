@@ -14,6 +14,15 @@ public class Funcionario extends Pessoa{
     public void setSalario(double salario) {
         this.salario = salario;
     }
+    static{
+        System.out.println("BLoco de inicilização estático - FUNCIONARIO");
+    }
+    {
+        System.out.println("BLoco de inicialização - 1 - funcionario");
+    }
+    {
+        System.out.println("BLoco de inicialização - 2 - funcionario");
+    }
 
     @Override
     public void imprime() {

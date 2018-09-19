@@ -3024,8 +3024,156 @@ public class Funcionario extends Pessoa{
 
 
 
-## <a name="parte55"></a>
+## <a name="parte55">Aula 54   Herança e Sequência de inicialização pt 05</a>
 
+- Espaço em memória é alocado para o objeto sendo contruído;
+- Cada um dos atributos do objeto é criado e inicializando com os valores default;
+- o construtor da superclasse é chamado;
+- A inicialização dos atributos via declaração e o codigo do bloco de inicialização de superclasse são executados na ordem qm que aparecem;
+- O código do construtor da super classe é chamado;
+- Passo 4 para a subclasse é executado;
+- O código do construtor da classe é executado.
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class Pessoa {
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Pessoa(String nome, String cpf) {
+        this(nome);
+        this.cpf = cpf;
+    }
+
+    static{
+        System.out.println("BLoco de inicilização estático - PESSOA");
+    }
+    {
+        System.out.println("BLoco de inicialização - 1 - pessoa");
+    }
+    {
+        System.out.println("BLoco de inicialização - 2 - pessoa");
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public void imprime(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        System.out.println("Rua : " + this.endereco.getRua());
+    }
+}
+
+```
+
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class Funcionario extends Pessoa{
+    private double salario;
+
+    public Funcionario(String nome) {
+        super(nome); // primeira linha sempre!
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+    static{
+        System.out.println("BLoco de inicilização estático - FUNCIONARIO");
+    }
+    {
+        System.out.println("BLoco de inicialização - 1 - funcionario");
+    }
+    {
+        System.out.println("BLoco de inicialização - 2 - funcionario");
+    }
+
+    @Override
+    public void imprime() {
+        super.imprime();
+        System.out.println("Salario: "+ this.salario);
+        imprimeReciboPagamento();
+    }
+
+    public void imprimeReciboPagamento(){
+        System.out.println("Eu " + super.getNome() + " Recebi "+ this.salario);
+    }
+}
+
+```
+
+
+```java
+package br.com.abc.javacore.heranca;
+
+public class HerancaTest {
+    public static void main(String[] args) {
+        //Pessoa p = new Pessoa("Jose");
+        Endereco end = new Endereco();
+        //p.setNome("Jose");
+        //p.setCpf("789");
+        //end.setRua("Rua Tal");
+        end.setBairro("Marco");
+        //p.setEndereco(end);
+        //p.imprime();
+
+        System.out.println("------------------");
+
+        Funcionario f = new Funcionario("Jose Funcionario");
+        //f.setNome("Jose Funcionario");
+        f.setCpf("916");
+        f.setSalario(3000.00);
+        f.setEndereco(end);
+        //f.imprime();
+    }
+}
+
+```
+
+
+```
+BLoco de inicilização estático - PESSOA
+BLoco de inicilização estático - FUNCIONARIO
+BLoco de inicialização - 1 - pessoa
+BLoco de inicialização - 2 - pessoa
+BLoco de inicialização - 1 - funcionario
+BLoco de inicialização - 2 - funcionario
+
+```
 
 [Voltar ao Índice](#indice)
 

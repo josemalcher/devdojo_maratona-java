@@ -18,6 +18,16 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
+    static{
+        System.out.println("BLoco de inicilização estático - PESSOA");
+    }
+    {
+        System.out.println("BLoco de inicialização - 1 - pessoa");
+    }
+    {
+        System.out.println("BLoco de inicialização - 2 - pessoa");
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
