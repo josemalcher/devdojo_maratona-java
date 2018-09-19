@@ -2981,8 +2981,42 @@ Eu Jose Funcionario Recebi 3000.0
 
 
 
-## <a name="parte54"></a>
+## <a name="parte54">Aula 53 Herança e construtores pt 04</a>
 
+```java
+//(...)
+public class Pessoa {
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public Pessoa(String nome, String cpf) {
+        this(nome);
+        this.cpf = cpf;
+    }
+//(...)
+}
+```
+
+```java
+//(...)
+public class Funcionario extends Pessoa{
+    private double salario;
+
+    public Funcionario(String nome) {
+        super(nome); // primeira linha sempre!
+    }
+//(...)
+}
+```
 
 [Voltar ao Índice](#indice)
 

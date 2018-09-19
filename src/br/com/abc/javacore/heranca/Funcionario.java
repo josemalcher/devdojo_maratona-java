@@ -3,6 +3,10 @@ package br.com.abc.javacore.heranca;
 public class Funcionario extends Pessoa{
     private double salario;
 
+    public Funcionario(String nome) {
+        super(nome); // primeira linha sempre!
+    }
+
     public double getSalario() {
         return salario;
     }
