@@ -3344,7 +3344,71 @@ Carro{nome='null', marca='null'}
 
 
 
-## <a name="parte58"></a>
+## <a name="parte58">Aula 57  Enumeração pt 01</a>
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public class Cliente {
+    private String nome;
+    private TipoCliente tipo;
+
+    public Cliente(String nome, TipoCliente tipo) {
+        this.nome = nome;
+        this.tipo = tipo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public TipoCliente getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoCliente tipo) {
+        this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", tipo=" + tipo +
+                '}';
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public enum TipoCliente {
+    PESSOA_FISICA , PESSOA_JURIDICA;
+}
+
+```
+
+```java
+package br.com.abc.javacore.exemploenum;
+
+public class ClienteTest {
+    public static void main(String[] args) {
+        Cliente cliente = new Cliente("Jose", TipoCliente.PESSOA_FISICA);
+        System.out.println(cliente);
+    }
+}
+
+```
+
+```
+Cliente{nome='Jose', tipo=PESSOA_FISICA}
+```
 
 
 [Voltar ao Índice](#indice)
