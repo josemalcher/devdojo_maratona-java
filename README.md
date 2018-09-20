@@ -4208,8 +4208,54 @@ Total vendas 20000.0
 
 
 
-## <a name="parte67"></a>
+## <a name="parte67">Aula 66  Polimorfismo pt 03</a>
 
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public interface GenericDAO {
+     public abstract void save();
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class DataBaseDAOImpl implements GenericDAO {
+    @Override
+    public void save() {
+        System.out.println("Salvando dados no BANCO DE DADOS");
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class ArquivoDaoImpl implements GenericDAO {
+    @Override
+    public void save() {
+        System.out.println("Salvando dados no arquivos");
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class DAOTest {
+    public static void main(String[] args) {
+        //GenericDAO dao = new ArquivoDaoImpl();
+        GenericDAO dao = new DataBaseDAOImpl();
+        dao.save();
+
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
