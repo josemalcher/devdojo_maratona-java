@@ -16,11 +16,21 @@ public class RelatorioPagamento {
         System.out.println("Salario do mes "+ vendedor.getSalario());
     }*/
 
-    public void relatorioPagamentoGenerico(Funcionario funcionario){
+    public void relatorioPagamentoGenerico(Funcionario funcionario){ // Parâmetros polimorficos
         System.out.println("RELATORIO PARAMENTO VENDEDOR");
         funcionario.calcularPagamento();
         System.out.println("Nome: "+ funcionario.getNome());
         System.out.println("Salario do mes "+ funcionario.getSalario());
+
+        if(funcionario instanceof Gerente){
+            Gerente g = (Gerente) funcionario;
+            System.out.println("Participação nos lucros " + g.getPnl());
+        }
+        if(funcionario instanceof Vendedor){
+            //Vendedor v = (Vendedor) funcionario;
+            System.out.println("Total vendas " + ((Vendedor) funcionario).getTotalVendas() );
+        }
+
     }
 
 }
