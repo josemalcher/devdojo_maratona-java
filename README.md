@@ -3978,8 +3978,168 @@ na uml
 
 
 
-## <a name="parte65"></a>
+## <a name="parte65">Aula 64  Polimorfismo pt 01</a>
 
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public abstract class Funcionario {
+    protected String nome;
+    protected double salario;
+
+    public Funcionario(String nome, double salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", salario=" + salario +
+                '}';
+    }
+
+    public abstract void calcularPagamento();
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class Vendedor  extends Funcionario{
+    private double totalVendas;
+
+    public Vendedor(String nome, double salario, double totalVendas) {
+        super(nome, salario);
+        this.totalVendas = totalVendas;
+    }
+
+    public double getTotalVendas() {
+        return totalVendas;
+    }
+
+    public void setTotalVendas(double totalVendas) {
+        this.totalVendas = totalVendas;
+    }
+
+    @Override
+    public void calcularPagamento() {
+        this.salario = this.salario + (totalVendas * 0.05);
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class Gerente extends Funcionario{
+    private double pnl;
+
+    public Gerente(String nome, double salario, double pnl) {
+        super(nome, salario);
+        this.pnl = pnl;
+    }
+
+    public double getPnl() {
+        return pnl;
+    }
+
+    public void setPnl(double pnl) {
+        this.pnl = pnl;
+    }
+
+    @Override
+    public void calcularPagamento() {
+        this.salario = this.salario + pnl;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class RelatorioPagamento {
+
+    /*public void relatorioPagamentoGerente(Gerente gerente){
+        System.out.println("RELATORIO PARAMENTO GERENTE");
+        gerente.calcularPagamento();
+        System.out.println("Nome: "+ gerente.getNome());
+        System.out.println("Salario do mes "+ gerente.getSalario());
+    }
+
+    public void relatorioPagamentoVendedor(Vendedor vendedor){
+        System.out.println("RELATORIO PARAMENTO VENDEDOR");
+        vendedor.calcularPagamento();
+        System.out.println("Nome: "+ vendedor.getNome());
+        System.out.println("Salario do mes "+ vendedor.getSalario());
+    }*/
+
+    public void relatorioPagamentoGenerico(Funcionario funcionario){
+        System.out.println("RELATORIO PARAMENTO VENDEDOR");
+        funcionario.calcularPagamento();
+        System.out.println("Nome: "+ funcionario.getNome());
+        System.out.println("Salario do mes "+ funcionario.getSalario());
+    }
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.polimorfismo;
+
+public class PolimorfismoTeste {
+    public static void main(String[] args) {
+        Gerente g = new Gerente("Jose", 5000 , 2000);
+        Vendedor v = new Vendedor("Mario", 2000, 20000);
+
+        RelatorioPagamento relatorioPagamento = new RelatorioPagamento();
+//        relatorioPagamento.relatorioPagamentoGerente(g);
+//        System.out.println("------------------------------------------------------");
+//        relatorioPagamento.relatorioPagamentoVendedor(v);
+        relatorioPagamento.relatorioPagamentoGenerico(g);
+        System.out.println("------------------------------------------------------");
+        relatorioPagamento.relatorioPagamentoGenerico(v);
+
+//        Funcionario f = g;
+//        System.out.println("##########################");
+//        System.out.println(f.getSalario());
+
+    }
+    
+    /*
+    RELATORIO PARAMENTO VENDEDOR
+    Nome: Jose
+    Salario do mes 7000.0
+    ------------------------------------------------------
+    RELATORIO PARAMENTO VENDEDOR
+    Nome: Mario
+    Salario do mes 3000.0
+    * */
+
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
