@@ -4284,9 +4284,9 @@ public class ErrorTest {
 ```
 
 ```
-	at br.com.abc.javacore.exception.ErrorTest.stackOverFlowError(ErrorTest.java:8)
-	at br.com.abc.javacore.exception.ErrorTest.stackOverFlowError(ErrorTest.java:8)
-	at br.com.abc.javacore.exception.ErrorTest.stackOverFlowError(ErrorTest.java:8)
+	at br.com.abc.javacore.exception.error.ErrorTest.stackOverFlowError(ErrorTest.java:8)
+	at br.com.abc.javacore.exception.error.ErrorTest.stackOverFlowError(ErrorTest.java:8)
+	at br.com.abc.javacore.exception.error.ErrorTest.stackOverFlowError(ErrorTest.java:8)
 
 ```
 
@@ -4297,7 +4297,33 @@ public class ErrorTest {
 
 
 
-## <a name="parte69"></a>
+## <a name="parte69">Aula 68   Exceptions pt 02</a>
+
+```java
+package br.com.abc.javacore.exception.runtimeexception;
+
+public class RuntimeExceptionTest {
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 0;
+        //if(b != 0){
+            int c = a/b;
+            System.out.println(c);
+       // }
+        //Exception in thread "main" java.lang.ArithmeticException: / by zero
+
+        //Object o  =  null;
+        //System.out.println(o.toString());
+        // Exception in thread "main" java.lang.NullPointerException
+
+        //int[] a = new int[2];
+        //System.out.println(a[2]);
+        // Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
+    }
+}
+
+```
 
 
 [Voltar ao Índice](#indice)

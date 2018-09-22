@@ -1,4 +1,4 @@
-package br.com.abc.javacore.exception;
+package br.com.abc.javacore.exception.error;
 
 public class ErrorTest {
     public static void main(String[] args) {
