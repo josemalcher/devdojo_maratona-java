@@ -39,6 +39,19 @@ public class CheckedExceptionTeste {
             e.printStackTrace();
             throw e;
         }
-
+    }
+    public static String abrirArquivo(){
+        try{
+            System.out.println("Abrindo arquivo");
+            System.out.println("Executando o aquivo e leitura");
+            //throw new Exception();
+            return "valor";
+        }catch (Exception e){
+            System.out.println("Dentro do catch");
+            e.printStackTrace();
+        }finally {// bloco sempre será executado
+            System.out.println("Fechar o arquivo");
+        }
+        return null;
     }
 }

@@ -4477,8 +4477,36 @@ public class CheckedExceptionTeste {
 ---
 
 
-## <a name="parte72"></a>
+## <a name="parte72">Aula 71 Exceptions bloco finally pt 05</a>
 
+```java
+package br.com.abc.javacore.exception.checkedexception;
+
+import java.io.File;
+import java.io.IOException;
+
+public class CheckedExceptionTeste {
+    public static void main(String[] args) {
+        abrirArquivo();
+    }
+
+      public static String abrirArquivo(){
+        try{
+            System.out.println("Abrindo arquivo");
+            System.out.println("Executando o aquivo e leitura");
+            //throw new Exception();
+            return "valor";
+        }catch (Exception e){
+            System.out.println("Dentro do catch");
+            e.printStackTrace();
+        }finally {// bloco sempre será executado
+            System.out.println("Fechar o arquivo");
+        }
+        return null;
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
