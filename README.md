@@ -4397,3 +4397,293 @@ public class RuntimeExceptionTest {
 
 ---
 
+
+## <a name="parte71">Aula 70 Exceptions lançamento de exceção pt 04</a>
+
+```java
+package br.com.abc.javacore.exception.runtimeexception;
+
+public class RuntimeExceptionTest {
+    public static void main(String[] args) {
+        try{
+            divisao(10,0);
+        }catch (RuntimeException e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static void divisao(int num1, int num2) {
+        if(num2 == 0){
+            throw new IllegalArgumentException("Passe um valor diferente de zero");
+        }
+        int result = num1/num2;
+        System.out.println(result);
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.exception.checkedexception;
+
+import java.io.File;
+import java.io.IOException;
+
+public class CheckedExceptionTeste {
+    public static void main(String[] args) {
+        try{
+            criarArquivo();
+
+        }catch (IOException e ){
+            e.printStackTrace();
+        }
+    }
+
+    private static void criarArquivo() throws IOException {
+        /*File file = new File("testeCheckedException.txt");
+        try {
+            file.createNewFile();
+            System.out.println("Arquivo Criado");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+
+        // Relançar a exception ex1
+        /*
+        File file = new File("testeCheckedException.txt");
+        file.createNewFile();
+        System.out.println("Arquivo Criado");
+        */
+
+        // Relançar a exception ex2
+        File file = new File("testeCheckedException.txt");
+        try{
+            file.createNewFile();
+            System.out.println("Arquivo Criado");
+
+        }catch (IOException e){
+            e.printStackTrace();
+            throw e;
+        }
+    }
+}
+
+```
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte72"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte73"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte74"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte75"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte76"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte77"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte78"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte79"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte80"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte81"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte82"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte83"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte84"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte85"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte86"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte87"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte88"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte89"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte90"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte91"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte92"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte93"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte94"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte95"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte96"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte97"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte98"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte99"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte100"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte101"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
