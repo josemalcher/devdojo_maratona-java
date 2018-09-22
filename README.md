@@ -4726,8 +4726,70 @@ public class LoginInvalidoExceptionTeste {
 ---
 
 
-## <a name="parte77"></a>
+## <a name="parte77">Aula 76 Exceptions e regras para sobrescrita pt 10</a>
 
+```java
+package br.com.abc.javacore.exception.checkedexception;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class Pessoa {
+    /*public void salvar() throws LoginInvalidoException, FileNotFoundException{
+
+    }*/
+    public void salvar() throws LoginInvalidoException, IOException {
+
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.exception.checkedexception;
+
+import java.io.FileNotFoundException;
+
+public class Funcionario extends Pessoa{
+
+    /*
+    @Override
+    public void salvar() throws LoginInvalidoException {
+
+    }
+    */
+    /*
+    @Override
+    public void salvar() throws LoginInvalidoException, FileNotFoundException {
+
+    }
+    */
+    // pode declarar "filhas" (IOException)
+    public void salvar() throws FileNotFoundException {
+
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.exception.checkedexception;
+
+import java.io.FileNotFoundException;
+
+public class SobreescritaComExceptionTeste {
+    public static void main(String[] args) {
+        Funcionario fun = new Funcionario();
+        Pessoa p = new Pessoa();
+        try {
+            fun.salvar();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
