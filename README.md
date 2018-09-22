@@ -4263,7 +4263,32 @@ public class DAOTest {
 
 
 
-## <a name="parte68"></a>
+## <a name="parte68">Aula 67  Exceptions pt 01</a>
+
+![Excelptions](img/Exceptions.png)
+
+```java
+
+package br.com.abc.javacore.exception;
+
+public class ErrorTest {
+    public static void main(String[] args) {
+        stackOverFlowError();
+    }
+    public static void stackOverFlowError(){
+        stackOverFlowError();
+    }
+}
+
+
+```
+
+```
+	at br.com.abc.javacore.exception.ErrorTest.stackOverFlowError(ErrorTest.java:8)
+	at br.com.abc.javacore.exception.ErrorTest.stackOverFlowError(ErrorTest.java:8)
+	at br.com.abc.javacore.exception.ErrorTest.stackOverFlowError(ErrorTest.java:8)
+
+```
 
 
 [Voltar ao Índice](#indice)
