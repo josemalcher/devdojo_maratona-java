@@ -5237,6 +5237,28 @@ R$ 212,46
 
 ## <a name="parte89">Aula 88  Datas personalizadas com SimpleDateFormat</a>
 
+- https://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html
+
+```java
+package br.com.abc.javacore.datas;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class SimpleDateFormatTeste {
+    public static void main(String[] args) {
+        Calendar c = Calendar.getInstance();
+        String mascara = "'Belém/PA,' dd 'de' MMMM 'de' yyyy";
+        SimpleDateFormat formatador = new SimpleDateFormat(mascara);
+        System.out.println(formatador.format(c.getTime()));
+    }
+}
+
+```
+
+```
+Belém/PA, 23 de Setembro de 2018
+```
 
 [Voltar ao Índice](#indice)
 
