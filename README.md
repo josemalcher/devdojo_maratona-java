@@ -4835,7 +4835,188 @@ public class AssertTest {
 ---
 
 
-## <a name="parte79"></a>
+## <a name="parte79">Aula 78  Classes Wrapper pt 01</a>
+
+```java
+package br.com.abc.javacore.wrappers;
+
+public class WrappersTeste {
+    public static void main(String[] args) {
+        byte bytePrimitivo = 1;
+        short shortPrimitivo = 1;
+        int intPrimitivo = 1;
+        long longPrimitivo = 10L;
+        float floatPrimitivo = 10F;
+        double doublePrimitivo = 10D;
+        char charPrimitivo = 'A';
+        boolean booleanPrimitivo = true;
+
+        Byte byteWrapper = 1;
+        Short shortWrapper = 1;
+        Integer integerWrapper = 1;
+        Long longWrapper = 10L;
+        Float floadWrapper = 10F;
+        Double doubleWrapper = 10D;
+        Character characterWrapper = 'A';
+        Boolean booleanWrapper = true;
+    }
+}
+
+```
+
+[Voltar ao Índice](#indice)
+
+---
+
+
+## <a name="parte80">Aula 79   Classes Wrapper pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte81">Aula 80  String pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte82">Aula 81   String pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte83">Aula 82   Performance das Strings</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte84">Aula 83   StringBuilder and StringBuffer</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte85">Aula 84 Datas com  Date e Calendar</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte86">Aula 85 Formatação de datas com DateFormat</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+## <a name="parte87">Aula 86 Internacionalização com a classe Locale</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte88">Aula 87 Formatação de números e moeda com NumberFormat</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte89">Aula 88  Datas personalizadas com SimpleDateFormat</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte90">Aula 89 Expressões regulares pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte91">Aula 90 Expressões regulares pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte92">Aula 91 Expressões regulares pt 03</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte93">Aula 92 Expressões regulares pt 04</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte94">Aula 93   Expressões regulares pt 05</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte95">Aula 94 Expressões regulares pt 06</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte96">Aula 95 Tokens e Delimitadores com String e Scanner</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte97">Aula 96 Resource Bundles pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte98">Aula 97 Resource Bundles pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte99">Aula 98 IO pt 01 Classe File para arquivos</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte100">Aula 99 IO pt 02 FileWriter e FileReader</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte101">Aula 100 IO pt 03 BufferedWriter e BufferedReader</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte102"></a>
 
 
 [Voltar ao Índice](#indice)
@@ -4843,147 +5024,203 @@ public class AssertTest {
 ---
 
 
-## <a name="parte80"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte81"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte82"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte83"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte84"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte85"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte86"></a>
-
-
-[Voltar ao Índice](#indice)
-
----
-## <a name="parte87"></a>
+## <a name="parte103"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte88"></a>
+## <a name="parte104"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte89"></a>
+## <a name="parte105"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte90"></a>
+## <a name="parte106"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte91"></a>
+## <a name="parte107"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte92"></a>
+## <a name="parte108"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte93"></a>
+## <a name="parte109"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte94"></a>
+## <a name="parte110"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte95"></a>
+## <a name="parte111"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte96"></a>
+## <a name="parte112"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte97"></a>
+## <a name="parte113"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte98"></a>
+## <a name="parte114"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte99"></a>
+## <a name="parte115"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte100"></a>
+## <a name="parte116"></a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte101"></a>
+## <a name="parte117"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte118"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte119"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte120"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte121"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte122"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte123"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte124"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte125"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte126"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte127"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte128"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte129"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte130"></a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte131"></a>
 
 
 [Voltar ao Índice](#indice)
