@@ -4871,6 +4871,27 @@ public class WrappersTeste {
 
 ## <a name="parte80">Aula 79   Classes Wrapper pt 02</a>
 
+```java
+package br.com.abc.javacore.wrappers;
+
+public class WrappersTeste {
+    public static void main(String[] args) {
+ 
+        String valor = "10";
+        Float f = Float.parseFloat(valor);
+        System.out.println(f);
+
+        System.out.println(Character.isDigit('9'));
+        System.out.println(Character.isLetter('l'));
+        System.out.println(Character.isLetterOrDigit('#'));
+        System.out.println(Character.isUpperCase('A'));
+        System.out.println(Character.isLowerCase('A'));
+        System.out.println(Character.toUpperCase('a'));
+        System.out.println(Character.toUpperCase('9'));
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 

@@ -19,5 +19,17 @@ public class WrappersTeste {
         Double doubleWrapper = 10D;
         Character characterWrapper = 'A';
         Boolean booleanWrapper = true;
+
+        String valor = "10";
+        Float f = Float.parseFloat(valor);
+        System.out.println(f);
+
+        System.out.println(Character.isDigit('9'));
+        System.out.println(Character.isLetter('l'));
+        System.out.println(Character.isLetterOrDigit('#'));
+        System.out.println(Character.isUpperCase('A'));
+        System.out.println(Character.isLowerCase('A'));
+        System.out.println(Character.toUpperCase('a'));
+        System.out.println(Character.toUpperCase('9'));
     }
 }
