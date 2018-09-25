@@ -5348,7 +5348,7 @@ Belém/PA, 23 de Setembro de 2018
 
 ---
 
-## <a name="parte102"></a>
+## <a name="parte102">Aula 101 IO pt 04 Classe File para diretórios</a>
 
 
 [Voltar ao Índice](#indice)
@@ -5356,203 +5356,757 @@ Belém/PA, 23 de Setembro de 2018
 ---
 
 
-## <a name="parte103"></a>
+## <a name="parte103">Aula 102 IO pt 05 Classe Console</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte104"></a>
+## <a name="parte104">Aula 103  NIO pt 01 Introdução as novas classes Path, Paths, Files</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte105"></a>
+## <a name="parte105">Aula 104 NIO pt 02 Uso básico das classes Path, Paths, Files</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte106"></a>
+## <a name="parte106">Aula 105 NIO pt 03 Normalizando paths</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte107"></a>
+## <a name="parte107">Aula 106 NIO pt 04 Resolvendo paths</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte108"></a>
+## <a name="parte108">Aula 107 NIO pt 05 Relativizando paths</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte109"></a>
+## <a name="parte109">Aula 108 NIO pt 06 BasicFileAttributes e BasicFileAttributeView</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte110"></a>
+## <a name="parte110">Aula 109  NIO pt 07 DosFileAttributes e DosFileAttributeView</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte111"></a>
+## <a name="parte111">Aula 110  NIO pt 08 PosixFileAttributes e PosixFileAttributeView</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte112"></a>
+## <a name="parte112">Aula 111 NIO pt 09 DirectoryStream e SimpleFileVisitor</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte113"></a>
+## <a name="parte113">Aula 112 NIO pt 10 PathMacther</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte114"></a>
+## <a name="parte114">Aula 113 IO pt 06  InputStream e OutputStream</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte115"></a>
+## <a name="parte115">Aula 114 NIO pt 11 Zipando arquivos com Java</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte116"></a>
+## <a name="parte116">Aula 115 Serialização</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte117"></a>
+## <a name="parte117">Aula 116 Coleções pt 01 método equals()</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte118"></a>
+## <a name="parte118">Aula 117 Coleções pt 02 método hashCode</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte119"></a>
+## <a name="parte119">Aula 118 Coleções pt 03 Introdução as coleções</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte120"></a>
+## <a name="parte120">Aula 119  Coleções pt 04 Lists pt 01</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte121"></a>
+## <a name="parte121">Aula 120 Coleções pt 05 Lists pt 02</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte122"></a>
+## <a name="parte122">Aula 121 Coleções pt 06 Ordenação de listas com Comparable</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte123"></a>
+## <a name="parte123">Aula 122   Coleções pt 07 Ordenação de listas e arrays com Comparator</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte124"></a>
+## <a name="parte124">Aula 123 Coleções pt 08 Busca binária em Lists e Arrays</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte125"></a>
+## <a name="parte125">Aula 124 Coleções pt 09 Convertendo Arrays em List e List em Arrays</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte126"></a>
+## <a name="parte126">Aula 125 Coleções pt 10 Removendo elementos da lista com Iterator</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte127"></a>
+## <a name="parte127">Aula 126 Coleções pt 11 Set, HashSet e LinkedHashSet</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte128"></a>
+## <a name="parte128">Aula 127 Coleções pt 12 NavigableSet e TreeSet</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte129"></a>
+## <a name="parte129">Aula 128 Coleções pt 13 Map, HashMap e LinkedHashMap pt 01</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte130"></a>
+## <a name="parte130">Aula 129 Coleções pt 14 Map, HashMap e LinkedHashMap pt 02</a>
 
 
 [Voltar ao Índice](#indice)
 
 ---
 
-## <a name="parte131"></a>
+## <a name="parte131">Aula 130 Coleções pt 15 NavigableMap e TreeMap</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+
+## <a name="parte132">Aula 131 Coleções pt 16 Queue e PriorityQueue</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte133">Aula 132 Generics pt 01 O que são Generics</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte134">Aula 133 Generics pt 02 Wildcard Caracter coringa</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte135">Aula 134 Generics pt 03 Classes genéricas</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte136">Aula 135 Generics pt 04 Métodos genéricos</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte137">Aula 136 Inner Classes pt 01 Classe Interna aninhada</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte138">Aula 137 Inner Classes pt 02 Classe Interna local</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte139">Aula 138 Inner Classes pt 03 Classes Anônimas</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+## <a name="parte140">Aula 139 Inner Classes pt 04 Classes Internas Estáticas</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte141">Aula 140 JDBC pt 01 Instalando o banco de dados MySQL</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte142">Aula 141 JDBC pt 02 Criando o banco e as tabelas</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte143">Aula 142 JDBC pt 03 Criando conexão com o banco de dados</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte144">Aula 143 JDBC pt 04 Inserindo dados no banco com Statement</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte145">Aula 144 JDBC pt 05 Atualizando e excluindo dados com Statement</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte146">Aula 145 JDBC pt 06 ResultSet pt 01   Selecionando registros</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte147">Aula 146 JDBC pt 07 ResultSet pt 02   Tipos de ResultSet e metadados</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte148">Aula 147 JDBC pt 08 ResultSet pt 03   Métodos para posicionamento do cursor</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte149">Aula 148 JDBC pt 09 RS pt 04 Atualizando registros através do ResultSet</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+  
+## <a name="parte150">Aula 149 JDBC pt 10 PreparedStatement</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte151">Aula 150 JDBC pt 11 Procedures e funções no banco com CallableStatement</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte152">Aula 151 JDBC pt 12 Connected RowSet   JdbcRowSet</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte153">Aula 152 JDBC pt 13 Disconnected RowSet   CachedRowSet</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte154">Aula 153 JDBC pt 14 Transações</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte155">Aula 154 JDBC pt 15 CRUD pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte156">Aula 155 JDBC pt 16 CRUD pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte157">Aula 156 Threads pt 01 O que são e como criar</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte158">Aula 157 Thread pt 02 Thread states</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte159">Aula 158 Threads pt 03 Parando a execução com Sleep, Yield e Join</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+   
+## <a name="parte160">Aula 159 Threads pt 04 Sincronismo de código pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte161">Aula 160 Sincronismo de código e Deadlock pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte162">Aula 161 Threads pt 06 Interação de Threads com wait, notify e notifyAll</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte163">Aula 162 Concorrência pt 01 Variáveis atômicas</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte164">Aula 163 Concorrência pt 02 Lock e ReentrantLock</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte165">Aula 164 Concorrência pt 03 Conditions</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte166">Aula 165 Concorrência pt 04  ReentrantReadWriteLock</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte167">Aula 166 Concorrência pt 05 CopyOnWriteArrayList</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte168">Aula 167  Concorrência pt 06 Coleções Concorrentes</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte169">Aula 168 Concorrência pt 07 Blocking Queues</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+    
+## <a name="parte170">Aula 169 Concorrência pt 08 Executors pt 01 Thread Pools</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte171">Aula 170 Concorrência pt 09 Executors pt 02 Scheduled Thread Pool</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte172">Aula 171 Concorrência pt 10 Interface Callable</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte173">Aula 172 Padrões de projeto pt 01 Padrão Builder</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte174">Aula 173 Padrões de projeto pt 02 Padrão Singleton</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte175">Aula 174 Padrões de projeto pt 03 Padrão DAO</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte176">Aula 175 Padrões de projeto pt 04 Padrão Factory</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte177">Aula 176 Java 8 Parametrizando comportamentos</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte178">Aula 177 Java 8 Programação Funcional e Lambdas pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte179">Aula 178 Java 8 Programação Funcional e Lambdas pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+     
+## <a name="parte180">Aula 179 Java 8 Programação Funcional e Lambdas pt 03</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte181">Aula 180 Java 8 Programação Funcional e Lambdas pt 04 Method References</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte182">Aula 181 Java 8 Novas regras para Interfaces, métodos default</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte183">Aula 182 Java 8 Evitando NullPointerException com Optional pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte184">Aula 183 Java 8 Evitando NullPointerException com Optional pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte185">Aula 184 Java 8 Evitando NullPointerException com Optional pt 03</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte186">Aula 185 Java 8 Streams pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte187">Aula 186 Java 8 Streams pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte188">Aula 187 Java 8 Streams pt 03, map e flatmap</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte189">Aula 188 Java 8 Streams pt 04, Finding and matching</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte190">Aula 189 Java 8 Streams pt 05, Streams especializados (Streams primitivos)</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+      
+## <a name="parte191">Aula 190 Java 8 Streams pt 06, Gerando Streams</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte192">Aula 191 Java 8 Streams pt 07, Reduzindo e sumarizando Streams</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte193">Aula 192 Java 8 Streams pt 08, Agrupando Streams</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte194">Aula 193 Java 8 Parallel Streams  pt 01, Introdução aos streams paralelos</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte195">Aula 194 Java 8 Parallel Streams  pt 02, Quando utilizar streams paralelos</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte196">Aula 195 Java 8 CompletableFuture  pt 01, Introdução a programação assíncrona</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte197">Aula 196 Java 8 CompletableFuture  pt 02, Funcionamento do CompletableFuture</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte198">Aula 197 Java 8 CompletableFuture  pt 03, Tratamento de exceções assíncronas</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte199">Aula 198 Java 8 CompletableFuture pt 04, Desempenho comparado aos Streams</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+       
+## <a name="parte200">Aula 199 Java 8 CompletableFuture  pt 05, CompletableFuture Custom Executor</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+ 
+         
+## <a name="parte201">Aula 200: Java 8 CompletableFuture pt 06, Encadeando tarefas pt 01</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte202">Aula 201: Java 8 CompletableFuture pt 07, Encadeando tarefas pt 02</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte203">Aula 202: Java 8 CompletableFuture pt 08, Exibindo resultados dinamicamente</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte204">Aula 203: Java 8 Nova API DateTime LocalDate, LocalTime, LocalDateTime</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte205">Aula 204: Java 8 Nova API DateTime Instant, Duration and Period</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte206">Aula 205: Java 8 Nova API Manipulando datas de forma relativa</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte207">Aula 206: Java 8 Nova API DateTime, Fazendo ajustes temporais com TimeAdjuster</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte208">Aula 207: Java 8 Nova API DateTime, Formatação e parse</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte209">Aula 208: Java 8 Nova API DateTime, Trabalhando com Time Zones</a>
+
+
+[Voltar ao Índice](#indice)
+
+---
+         
+## <a name="parte210">FIM DO MARATONA?</a>
 
 
 [Voltar ao Índice](#indice)
