@@ -5266,6 +5266,40 @@ Belém/PA, 23 de Setembro de 2018
 
 ## <a name="parte90">Aula 89 Expressões regulares pt 01</a>
 
+```java
+package br.com.abc.javacore.expressoesregulares;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ExpressoesRegularesTest {
+    public static void main(String[] args) {
+        String regex = "aba";
+        String texto = "ababababa";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(texto);
+
+        System.out.println("Texto: " + texto);
+        System.out.println("Indice: 0123456789 ");
+        System.out.println("Expressão: " + matcher.pattern());
+        System.out.println("Posições encontradas: ");
+        while(matcher.find()){
+            System.out.print(matcher.start() + " ");
+        }
+
+    }
+}
+
+```
+
+```
+Texto: ababababa
+Indice: 0123456789 
+Expressão: aba
+Posições encontradas: 
+0 4 
+```
 
 [Voltar ao Índice](#indice)
 
