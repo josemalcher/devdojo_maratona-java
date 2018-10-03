@@ -5557,6 +5557,77 @@ Posições encontradas:
 
 ## <a name="parte96">Aula 95 Tokens e Delimitadores com String e Scanner</a>
 
+```java
+package br.com.abc.javacore.expressoesregulares;
+
+public class TokenTeste {
+    public static void main(String[] args) {
+        String str = "José Malcher Joanna Camila Anna John Matheus junior";
+        String[] tokens = str.split(" ");
+        for(String arr: tokens){
+            System.out.println(arr.trim());
+        }
+    }
+}
+
+```
+
+```
+José
+Malcher
+Joanna
+Camila
+Anna
+John
+Matheus
+junior
+```
+
+```java
+package br.com.abc.javacore.expressoesregulares;
+
+import java.util.Scanner;
+
+public class ScannerTeste {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner("1 true 100 oi");
+
+        while (scanner.hasNext()) {
+            System.out.println(scanner.next());
+        }
+
+        System.out.println("####################");
+
+        Scanner scanner2 = new Scanner("1 true 100 oi");
+
+        while (scanner2.hasNext()) {
+            if (scanner2.hasNextInt()) {
+                int i = scanner2.nextInt();
+                System.out.println("int " + i);
+            } else if (scanner2.hasNextBoolean()) {
+                boolean b = scanner2.nextBoolean();
+                System.out.println(b);
+            } else {
+                System.out.println(scanner2.next());
+            }
+        }
+    }
+}
+
+```
+
+```
+1
+true
+100
+oi
+####################
+int 1
+true
+int 100
+oi
+```
 
 [Voltar ao Índice](#indice)
 
