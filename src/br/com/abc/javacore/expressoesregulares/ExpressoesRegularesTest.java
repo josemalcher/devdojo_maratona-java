@@ -14,10 +14,21 @@ public class ExpressoesRegularesTest {
         *  \w - caracteres de palavras a-z A-Z, digitos e _
         *  \W - tudo o que não for caractere de palavra
         *  []
+        *
+        *  ? zero ou uma
+        *  * zero ou mais
+        *  + uma ou mais
+        *  {n,m} de n até m
+        *  ()
+        *  |
+        *  &
+        *  o(v|c)o = ovo, oco
+        *  maca(rr|c)ão = macarrão ou macação
+        *
         */
 
-        String regex = "0[xX][0-9a-fA-F]";
-        String texto = "'1 0x 0xF 0X10G 0x1";
+        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
+        String texto = "12 0x 0X 0X01FFABC 0x10G 0x1";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
