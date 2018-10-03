@@ -5530,6 +5530,26 @@ public class ExpressoesRegularesTest {
 
 ## <a name="parte95">Aula 94 Expressões regulares pt 06</a>
 
+```java
+//  ^ - negação 
+        String regex = "proj([^,])*";
+        String texto = "proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java, diagrama, texto, foto";
+
+```
+
+
+```
+Texto: proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java, diagrama, texto, foto
+Indice: 0123456789 
+Expressão: proj([^,])*
+Posições encontradas: 
+0 proj1.bkp
+11 proj1.java
+23 proj1.class
+36 proj1final.java
+53 proj2.bkp
+64 proj3.java
+```
 
 [Voltar ao Índice](#indice)
 

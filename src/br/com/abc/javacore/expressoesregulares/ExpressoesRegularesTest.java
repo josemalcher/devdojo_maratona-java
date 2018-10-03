@@ -25,6 +25,8 @@ public class ExpressoesRegularesTest {
         *  o(v|c)o = ovo, oco
         *  maca(rr|c)ão = macarrão ou macação
         *
+        *  ^ - Negação
+        *
         */
 
 //        String regex = "0[xX]([0-9a-fA-F])+(\\s|$)";
@@ -33,8 +35,11 @@ public class ExpressoesRegularesTest {
         //String regex = "([a-zA-Z0-9\\._-])+@([a-zA-Z])+(\\.([a-zA-Z])+)+"; //([\\w\\.])+@([a-zA-Z])+(\.([a-zA-Z])+)+
         //String texto = "fulano@hotmail.com, 123abc@gmail.com, @#te@gmail.com, teste@teste.com.br, teste@teste.com, teste@mail";
 
-        String regex = "\\d{2}/\\d{2}/\\d{2,4}";
-        String texto = "05/10/2010 05/05/2015 1/1/01 01/05/95"; // dd/MM/yyyy
+        //String regex = "\\d{2}/\\d{2}/\\d{2,4}";
+        //String texto = "05/10/2010 05/05/2015 1/1/01 01/05/95"; // dd/MM/yyyy
+
+        String regex = "proj([^,])*";
+        String texto = "proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java, diagrama, texto, foto";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
