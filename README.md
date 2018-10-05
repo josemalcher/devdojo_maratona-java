@@ -5704,6 +5704,7 @@ show
 
 ## <a name="parte98">Aula 97 Resource Bundles pt 02</a>
 
+- Usando o IntelliJ para criar os Bundles
 
 [Voltar ao Índice](#indice)
 
@@ -5711,6 +5712,47 @@ show
 
 ## <a name="parte99">Aula 98 IO pt 01 Classe File para arquivos</a>
 
+```java
+package br.com.abc.javacore.io.test;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FileTest {
+    public static void main(String[] args) {
+        File file =  new File("io_File.txt");
+        try {
+            System.out.println(file.createNewFile());
+
+            boolean exists = file.exists();
+            System.out.println("Permissão de leitura " + file.canRead());
+            System.out.println("PATH " + file.getPath());
+            System.out.println("PATH " + file.getAbsolutePath());
+            System.out.println("Diretório " + file.isDirectory());
+            System.out.println("Hidden? " + file.isHidden());
+            System.out.println("Ultima modificação " + file.lastModified());
+            if(exists){
+                System.out.println("DELETADO? " + file.delete());
+            }
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+```
+
+```
+true
+Permissão de leitura true
+PATH io_File.txt
+PATH C:\Users\josemalcher\Documents\09-Workspaces\devdojo-maratona-java\io_File.txt
+Diretório false
+Hidden? false
+Ultima modificação 1538699950288
+DELETADO? true
+```
 
 [Voltar ao Índice](#indice)
 
