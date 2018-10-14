@@ -6113,6 +6113,47 @@ a\b\b
 
 ## <a name="parte107">Aula 106 NIO pt 04 Resolvendo paths</a>
 
+```java
+package br.com.abc.javacore.nio;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class ResolvendoPaths {
+    public static void main(String[] args) {
+        Path dir = Paths.get("home\\josemalcher");
+        Path arquivo = Paths.get("dev\\arquivo.txt");
+        Path result = dir.resolve(arquivo);
+        System.out.println(result);
+
+        System.out.println("-----------------------------");
+
+        Path absoluto = Paths.get("home/josemalcher");
+        Path relativo = Paths.get("dev");
+        Path file = Paths.get("file.txt");
+
+        System.out.println("1: " + absoluto.resolve(relativo));
+        System.out.println("2: " + absoluto.resolve(file));
+        System.out.println("3: " + relativo.resolve(file));
+        System.out.println("4: " + relativo.resolve(absoluto));
+        System.out.println("5: " + file.resolve(absoluto));
+        System.out.println("6: " + file.resolve(relativo));
+    }
+}
+
+```
+
+```
+home\josemalcher\dev\arquivo.txt
+-----------------------------
+1: home\josemalcher\dev
+2: home\josemalcher\file.txt
+3: dev\file.txt
+4: dev\home\josemalcher
+5: file.txt\home\josemalcher
+6: file.txt\dev
+```
+
 
 [Voltar ao Índice](#indice)
 
