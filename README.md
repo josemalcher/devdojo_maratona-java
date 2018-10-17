@@ -6311,6 +6311,59 @@ Process finished with exit code 0
 
 ## <a name="parte110">Aula 109  NIO pt 07 DosFileAttributes e DosFileAttributeView</a>
 
+```java
+package br.com.abc.javacore.nio;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.DosFileAttributeView;
+import java.nio.file.attribute.DosFileAttributes;
+
+public class DosFileAttributesTest {
+    public static void main(String[] args) {
+        Path path = Paths.get("C:\\Users\\josemalcher\\Documents\\09-Workspaces\\devdojo-maratona-java\\folder_nio_1\\arquivo_dosFile.txt");
+
+        try {
+            Files.createFile(path);
+            Files.setAttribute(path, "dos:hidden", true);
+            Files.setAttribute(path, "dos:readonly", true);
+
+            DosFileAttributes dos = Files.readAttributes(path, DosFileAttributes.class);
+            System.out.println(dos.isHidden());
+            System.out.println(dos.isReadOnly());
+            System.out.println("--------------------------------");
+
+            DosFileAttributeView dosView = Files.getFileAttributeView(path,DosFileAttributeView.class);
+            dosView.setHidden(false);
+            dosView.setReadOnly(false);
+            dos = Files.readAttributes(path, DosFileAttributes.class);
+            System.out.println(dos.isHidden());
+            System.out.println(dos.isReadOnly());
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+}
+
+```
+
+```
+"C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\lib\idea_rt.jar=57160:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Users\josemalcher\Documents\09-Workspaces\devdojo-maratona-java\out\production\devdojo-maratona-java" br.com.abc.javacore.nio.DosFileAttributesTest
+   true
+   true
+   --------------------------------
+   false
+   false
+   
+   Process finished with exit code 0
+
+
+```
 
 [Voltar ao Índice](#indice)
 
