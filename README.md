@@ -6495,6 +6495,84 @@ class PrintDirs extends SimpleFileVisitor<Path> {
 
 ## <a name="parte113">Aula 112 NIO pt 10 PathMacther</a>
 
+```java
+package br.com.abc.javacore.nio;
+
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+
+class FindAllTest extends SimpleFileVisitor<Path>{
+    private PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:**/*{Test*}.{java,class}");
+    @Override
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+        if(matcher.matches(file)){
+            System.out.println(file.getFileName());
+        }
+        return FileVisitResult.CONTINUE;
+    }
+}
+public class PathMatcherTest {
+    public static void main(String[] args) throws IOException{
+        Path path1 = Paths.get("folder_nio_1/subpasta/teste.bkp");
+        Path path2 = Paths.get("teste.bkp");
+        Path path3 = Paths.get("jose malcher");
+        PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:*.bkp");
+        System.out.println(matcher.matches(path1));
+        System.out.println(matcher.matches(path2));
+        System.out.println("-------------------");
+        matches(path1,"glob:*.bkp");
+        matches(path1,"glob:**/*.bkp");
+        matches(path1,"glob:*");
+        matches(path1,"glob:**");
+        System.out.println("-------------------");
+        matches(path1,"glob:*.???");
+        matches(path1,"glob:**/*.???");
+        matches(path1,"glob:**.???");
+        System.out.println("-------------------");
+        matches(path3,"glob:{jose*,malcher*}");
+        matches(path3,"glob:{jose,malcher}*");
+        matches(path3,"glob:{jose,malcher}");
+        Files.walkFileTree(Paths.get("./"), new FindAllTest());
+    }
+    private static void matches(Path path, String glob){
+        PathMatcher matcher = FileSystems.getDefault().getPathMatcher(glob);
+        System.out.println(glob+": "+matcher.matches(path));
+
+    }
+}
+
+```
+
+```
+"C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\lib\idea_rt.jar=56934:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Users\josemalcher\Documents\09-Workspaces\devdojo-maratona-java\out\production\devdojo-maratona-java" br.com.abc.javacore.nio.PathMatcherTest
+false
+true
+-------------------
+glob:*.bkp: false
+glob:**/*.bkp: true
+glob:*: false
+glob:**: true
+-------------------
+glob:*.???: false
+glob:**/*.???: true
+glob:**.???: true
+-------------------
+glob:{jose*,malcher*}: true
+glob:{jose,malcher}*: true
+glob:{jose,malcher}: false
+AssertTest.class
+AssociacaoTeste.class
+ClienteTeste.class
+FuncionarioTeste.class
+DateFormatTeste.class
+LocaleTeste.class
+(...) // diversos arquivos 
+WrappersTeste.java
+
+Process finished with exit code 0
+
+```
 
 [Voltar ao Índice](#indice)
 
