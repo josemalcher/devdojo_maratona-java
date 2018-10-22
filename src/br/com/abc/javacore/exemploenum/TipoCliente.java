@@ -23,7 +23,7 @@ public enum TipoCliente {
         return tipo;
     }
 
-    // constant specific class body (corpo de classe especifico constante)
+    // constant specific classes body (corpo de classe especifico constante)
 
     public String getId(){
         return  "A";

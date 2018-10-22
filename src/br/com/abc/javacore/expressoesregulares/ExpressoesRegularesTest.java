@@ -39,7 +39,7 @@ public class ExpressoesRegularesTest {
         //String texto = "05/10/2010 05/05/2015 1/1/01 01/05/95"; // dd/MM/yyyy
 
         String regex = "proj([^,])*";
-        String texto = "proj1.bkp, proj1.java, proj1.class, proj1final.java, proj2.bkp, proj3.java, diagrama, texto, foto";
+        String texto = "proj1.bkp, proj1.java, proj1.classes, proj1final.java, proj2.bkp, proj3.java, diagrama, texto, foto";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);

@@ -3569,7 +3569,7 @@ public enum TipoCliente {
         return tipo;
     }
 
-    // constant specific class body (corpo de classe especifico constante)
+    classes
 
     public String getId(){
         return  "A";
@@ -6724,6 +6724,173 @@ public class ZipandoTest {
 
 ## <a name="parte116">Aula 115 Serialização</a>
 
+```java
+package br.com.abc.javacore.serializacao.classes;
+
+public class Turma{
+    private String nome;
+
+    public Turma(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Turma{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.serializacao.classes;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class Aluno extends Pessoa implements Serializable {
+
+    private Long id;
+    private String nome;
+    private transient String password;
+    private static String  nomeEscola = "DEVDOJO";
+
+    private transient Turma turma;
+
+    public Aluno(Long id, String nome, String password) {
+        super();
+        this.id = id;
+        this.nome = nome;
+        this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public static String getNomeEscola() {
+        return nomeEscola;
+    }
+
+    public static void setNomeEscola(String nomeEscola) {
+        Aluno.nomeEscola = nomeEscola;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", password='" + password + '\'' +
+                ", nomeEscola='" + nomeEscola + '\'' +
+                ", Turma='" + turma + '\'' +
+                '}';
+    }
+
+    public Turma getTurma() {
+        return turma;
+    }
+
+    public void setTurma(Turma turma) {
+        this.turma = turma;
+    }
+
+    private void writeObject(ObjectOutputStream oss){
+        try{
+            oss.defaultWriteObject();
+            oss.writeUTF(turma.getNome());
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    private void readObject(ObjectInputStream ois){
+        try{
+            ois.defaultReadObject();
+            turma = new Turma(ois.readUTF());
+        }catch (IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.serializacao.testes;
+
+import br.com.abc.javacore.serializacao.classes.Aluno;
+import br.com.abc.javacore.serializacao.classes.Turma;
+
+import java.io.*;
+
+public class SerializacaoTest {
+    public static void main(String[] args) {
+        gravadorObjeto();
+        leitorObjeto();
+    }
+
+    public static void gravadorObjeto(){
+
+        Turma t = new Turma("MARATONA JAVA");
+
+        Aluno aluno = new Aluno(1L, "josé Malcher", "123456");
+
+        aluno.setTurma(t);
+
+        try(ObjectOutputStream oss = new ObjectOutputStream(new FileOutputStream("aluno.ser"))){
+            oss.writeObject(aluno);
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    public static void leitorObjeto(){
+        try(ObjectInputStream osi = new ObjectInputStream(new FileInputStream("aluno.ser"))){
+            Aluno aluno = (Aluno) osi.readObject();
+            System.out.println(aluno);
+        }catch (IOException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+}
+
+```
+
+```
+Aluno{id=1, nome='josé Malcher', password='null', nomeEscola='DEVDOJO', Turma='Turma{nome='MARATONA JAVA'}'}
+```
 
 [Voltar ao Índice](#indice)
 
