@@ -6898,6 +6898,102 @@ Aluno{id=1, nome='josé Malcher', password='null', nomeEscola='DEVDOJO', Turma='
 
 ## <a name="parte117">Aula 116 Coleções pt 01 método equals()</a>
 
+```java
+package br.com.abc.javacore.colecoes.classes;
+
+public class Celular {
+    private String nome;
+    private String IMEI;
+
+    public Celular(String nome, String IMEI) {
+        this.nome = nome;
+        this.IMEI = IMEI;
+    }
+
+    // Reflexivo = x.equals(x) tem que ser true para tudo que for diferente de null
+    // Simetrico para xe y diferentes de null, se x.equals(y) == true logo y.equals(x) tem que ser true
+
+    // Transitividade para x, y, z diferentes de null, se x.equals(y) == true, logo y.equals(x) == true e x.equals(z) == true logo y.equals(z) também tem que ser true
+    // Consistente x.equals(y) deve sempre retornar o mesmo valor para x diferente de null x.equals(null) tem que retornar false;
+
+    // Para hashcode
+    // Se x.equals(y) == true y.hashCode() == x.hashCode();
+    // y.hashCode() == x.hashCode() não necessariamente o equals deverá retornar true
+    // x.equals(y) == false
+    // y.hashCode() != x.hashCode() x.equals(y) deverá ser false
+
+
+    @Override
+    public int hashCode() {
+        return IMEI != null ? IMEI.hashCode() : 1;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) return false;
+        if (this == obj) return true;
+        if (this.getClass() != obj.getClass()) return false;
+        Celular outroCelular = (Celular) obj;
+        return IMEI != null && IMEI.equals(outroCelular.getIMEI());
+    }
+
+    @Override
+    public String toString() {
+        return "Celular{" +
+                "nome='" + nome + '\'' +
+                ", IMEI='" + IMEI + '\'' +
+                '}';
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getIMEI() {
+        return IMEI;
+    }
+
+    public void setIMEI(String IMEI) {
+        this.IMEI = IMEI;
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import br.com.abc.javacore.colecoes.classes.Celular;
+
+public class EqualsTest {
+    public static void main(String[] args) {
+        String nome1 = "Jose Malcher Jr";
+        String nome2 = new String("Jose Malcher Jr");
+
+        Integer int1 = 5;
+        Integer int2 = new Integer(5);
+
+        System.out.println(nome1.equals(nome2));
+        System.out.println(int1.equals(int2));
+
+        Celular c1 = new Celular("iPhone", "1234");
+        Celular c2 = new Celular("iPhone", "1234");
+        System.out.println(c2.equals(c1));
+
+    }
+}
+
+```
+
+```
+true
+true
+true
+```
 
 [Voltar ao Índice](#indice)
 
