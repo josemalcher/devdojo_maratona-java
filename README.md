@@ -7014,6 +7014,11 @@ true
 
 ## <a name="parte119">Aula 118 Coleções pt 03 Introdução as coleções</a>
 
+![collections](img/collection.png)
+
+- https://www.javacodegeeks.com/2011/04/simple-big-o-notation-post.html
+
+- http://bigocheatsheet.com/
 
 [Voltar ao Índice](#indice)
 
