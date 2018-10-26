@@ -7001,6 +7001,12 @@ true
 
 ## <a name="parte118">Aula 117 Coleções pt 02 método hashCode</a>
 
+```java
+ @Override
+    public int hashCode() {
+        return IMEI != null ? IMEI.hashCode() : 1;
+    }
+```
 
 [Voltar ao Índice](#indice)
 
