@@ -7120,6 +7120,173 @@ public class ListCelularTest {
 
 ## <a name="parte122">Aula 121 Coleções pt 06 Ordenação de listas com Comparable</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class SortListTest {
+    public static void main(String[] args) {
+        List<String> nomes = new ArrayList<>();
+        nomes.add("Jose");
+        nomes.add("Luci");
+        nomes.add("DevDojo");
+        nomes.add("Breno");
+        nomes.add("Caio");
+        nomes.add(0, "Anna");
+
+        Collections.sort(nomes);
+
+        List<Double> numeros = new ArrayList<>();
+        numeros.add(1.6);
+        numeros.add(1.1);
+        numeros.add(0.6);
+        numeros.add(1.0);
+        numeros.add(2d);
+
+        Collections.sort(numeros);
+
+        for(String nome: nomes){
+            System.out.println(nome);
+        }
+
+        for(Double numero : numeros){
+            System.out.println(numero);
+        }
+
+        /*
+        *   Anna
+            Breno
+            Caio
+            DevDojo
+            Jose
+            Luci
+            0.6
+            1.0
+            1.1
+            1.6
+            2.0
+        *
+        * */
+
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.colecoes.classes;
+
+import java.util.Objects;
+
+public class Produto implements Comparable<Produto> {
+
+    private String serialNumero;
+    private String nome;
+    private Double preco;
+
+
+    public Produto(String serialNumero, String nome, Double preco) {
+        this.serialNumero = serialNumero;
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Produto produto = (Produto) o;
+        return Objects.equals(serialNumero, produto.serialNumero);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(serialNumero);
+    }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+                "serialNumero='" + serialNumero + '\'' +
+                ", nome='" + nome + '\'' +
+                ", preco=" + preco +
+                '}';
+    }
+
+    public String getSerialNumero() {
+        return serialNumero;
+    }
+
+    public void setSerialNumero(String serialNumero) {
+        this.serialNumero = serialNumero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+
+    @Override
+    public int compareTo(Produto o) {
+
+        Double d = preco;
+
+        //return this.serialNumero.compareTo(o.getSerialNumero());
+        return d.compareTo(o.getPreco());
+    }
+}
+
+```
+
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import br.com.abc.javacore.colecoes.classes.Produto;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class SortProdutoTest {
+    public static void main(String[] args) {
+
+        List<Produto> produtos = new ArrayList<>();
+        Produto produto1 = new Produto("123", "Laptop Lenovo", 2000.0);
+        Produto produto2 = new Produto("321", "Picanha", 26.4);
+        Produto produto3 = new Produto("879", "Teclado Razer", 1000.0);
+        Produto produto4 = new Produto("012", "Samsung galaxy S7 64Gb", 3250.5);
+
+        produtos.add(produto1);
+        produtos.add(produto2);
+        produtos.add(produto3);
+        produtos.add(produto4);
+
+        Collections.sort(produtos);
+
+        for(Produto produto: produtos){
+            System.out.println(produto);
+        }
+
+    }
+}
+
+```
 
 [Voltar ao Índice](#indice)
 
