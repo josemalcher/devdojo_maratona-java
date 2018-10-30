@@ -7294,6 +7294,78 @@ public class SortProdutoTest {
 
 ## <a name="parte123">Aula 122   Coleções pt 07 Ordenação de listas e arrays com Comparator</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import br.com.abc.javacore.colecoes.classes.Produto;
+
+import java.util.*;
+
+class ProdutoNomeComparator implements Comparator<Produto>{
+
+
+    @Override
+    public int compare(Produto o1, Produto o2) {
+        return o1.getNome().compareTo(o2.getNome());
+    }
+}
+
+public class SortProdutoTest {
+    public static void main(String[] args) {
+
+        List<Produto> produtos = new ArrayList<>();
+
+        Produto[] produtoArrays = new Produto[4];
+
+        Produto produto1 = new Produto("123", "Laptop Lenovo", 2000.0);
+        Produto produto2 = new Produto("321", "Picanha", 26.4);
+        Produto produto3 = new Produto("879", "Teclado Razer", 1000.0);
+        Produto produto4 = new Produto("012", "Samsung galaxy S7 64Gb", 3250.5);
+
+        produtos.add(produto1);
+        produtos.add(produto2);
+        produtos.add(produto3);
+        produtos.add(produto4);
+
+        produtoArrays[0] = produto1;
+        produtoArrays[1] = produto2;
+        produtoArrays[2] = produto3;
+        produtoArrays[3] = produto4;
+
+        Collections.sort(produtos);
+
+        for(Produto produto: produtos){
+            System.out.println(produto);
+        }
+        System.out.println("--------------------------");
+
+
+        Arrays.sort(produtoArrays, new ProdutoNomeComparator());
+        for (Produto produto : produtoArrays){
+            System.out.println(produto);
+        }
+
+
+    }
+}
+
+```
+
+```
+"C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\lib\idea_rt.jar=63551:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Users\josemalcher\Documents\09-Workspaces\devdojo-maratona-java\out\production\devdojo-maratona-java" br.com.abc.javacore.colecoes.testes.SortProdutoTest
+Produto{serialNumero='321', nome='Picanha', preco=26.4}
+Produto{serialNumero='879', nome='Teclado Razer', preco=1000.0}
+Produto{serialNumero='123', nome='Laptop Lenovo', preco=2000.0}
+Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5}
+--------------------------
+Produto{serialNumero='123', nome='Laptop Lenovo', preco=2000.0}
+Produto{serialNumero='321', nome='Picanha', preco=26.4}
+Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5}
+Produto{serialNumero='879', nome='Teclado Razer', preco=1000.0}
+
+Process finished with exit code 0
+
+```
 
 [Voltar ao Índice](#indice)
 
