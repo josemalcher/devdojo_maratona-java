@@ -7373,8 +7373,86 @@ Process finished with exit code 0
 
 ## <a name="parte124">Aula 123 Coleções pt 08 Busca binária em Lists e Arrays</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import br.com.abc.javacore.colecoes.classes.Produto;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class BinarySearchTest {
+    public static void main(String[] args) {
+        List<Integer> numeros = new ArrayList<>();
+        numeros.add(2);
+        numeros.add(0);
+        numeros.add(4);
+        numeros.add(3);
+
+        // (-(ponto de insersão) -1), -1, -1 = -2
+        Collections.sort(numeros);
+        // 0,1,2,3
+        // 0,2,3,4
+        System.out.println(Collections.binarySearch(numeros,1));
+
+        List<Produto> produtos = new ArrayList<>();
+        Produto produto1 = new Produto("123", "Laptop Lenovo", 2000.0);
+        Produto produto2 = new Produto("321", "Picanha", 26.4);
+        Produto produto3 = new Produto("879", "Teclado Razer", 1000.0);
+        Produto produto4 = new Produto("012", "Samsung galaxy S7 64Gb", 3250.5);
+        produtos.add(produto1);
+        produtos.add(produto2);
+        produtos.add(produto3);
+        produtos.add(produto4);
+
+        Collections.sort(produtos, new ProdutoNomeComparator());
+
+        Produto produto5 = new Produto("000", "Antena", 50.0);
+
+        for (Produto produto : produtos) {
+            System.out.println(produto);
+        }
+
+        System.out.println(Collections.binarySearch(produtos, produto5, new ProdutoNomeComparator()));
+
+        Integer[] arrayInteger = new Integer[4];
+        arrayInteger[0] = 2;
+        arrayInteger[1] = 0;
+        arrayInteger[2] = 4;
+        arrayInteger[3] = 3;
+        Arrays.sort(arrayInteger);
+        System.out.println(Arrays.binarySearch(arrayInteger,1));
+
+
+    }
+}
+
+```
+
+```
+-2
+Produto{serialNumero='123', nome='Laptop Lenovo', preco=2000.0}
+Produto{serialNumero='321', nome='Picanha', preco=26.4}
+Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5}
+Produto{serialNumero='879', nome='Teclado Razer', preco=1000.0}
+-1
+-2
+
+```
 
 [Voltar ao Índice](#indice)
+"C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\lib\idea_rt.jar=64848:C:\Program Files\JetBrains\IntelliJ IDEA 2018.2.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Users\josemalcher\Documents\09-Workspaces\devdojo-maratona-java\out\production\devdojo-maratona-java" br.com.abc.javacore.colecoes.testes.BinarySearchTest
+-2
+Produto{serialNumero='123', nome='Laptop Lenovo', preco=2000.0}
+Produto{serialNumero='321', nome='Picanha', preco=26.4}
+Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5}
+Produto{serialNumero='879', nome='Teclado Razer', preco=1000.0}
+-1
+-2
+
+Process finished with exit code 0
 
 ---
 
