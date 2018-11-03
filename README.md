@@ -7676,6 +7676,39 @@ Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5, quantid
 
 ## <a name="parte129">Aula 128 Coleções pt 13 Map, HashMap e LinkedHashMap pt 01</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class MapTest {
+    public static void main(String[] args) {
+
+        Map<String, String> map = new LinkedHashMap<>();
+
+        map.put("teklado", "teclado");
+        map.put("mouze", "mouse");
+        map.put("vc", "você");
+        map.put("Meza", "mesa");
+//        for(String key : map.values()){
+//            System.out.println(key);
+//        }
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+    }
+}
+
+```
+
+```
+teklado teclado
+mouze mouse
+vc você
+Meza mesa
+
+```
 
 [Voltar ao Índice](#indice)
 
