@@ -7787,6 +7787,30 @@ Picanha
 
 ## <a name="parte132">Aula 131 Coleções pt 16 Queue e PriorityQueue</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class QueueTest {
+    public static void main(String[] args) {
+
+        Queue<String> queue = new PriorityQueue<>();
+        queue.add("D");
+        queue.add("A");
+        queue.add("B");
+        System.out.println(queue.remove("B"));
+        System.out.println(queue.size());
+    }
+}
+
+```
+
+```
+true
+2
+```
 
 [Voltar ao Índice](#indice)
 
