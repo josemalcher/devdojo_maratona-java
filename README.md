@@ -7617,6 +7617,58 @@ Produto{serialNumero='879', nome='Teclado Razer', preco=1000.0, quantidade=0}
 
 ## <a name="parte128">Aula 127 Coleções pt 12 NavigableSet e TreeSet</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import br.com.abc.javacore.colecoes.classes.Produto;
+
+import java.util.NavigableSet;
+import java.util.TreeSet;
+
+public class TreeSetTest {
+    public static void main(String[] args) {
+        Produto produto1 = new Produto("123", "Laptop Lenovo", 2000.0, 10);
+        Produto produto2 = new Produto("321", "Picanha", 10d, 10);
+        Produto produto3 = new Produto("879", "Teclado Razer", 1000.0, 0);
+        Produto produto4 = new Produto("012", "Samsung galaxy S7 64Gb", 3250.5, 0);
+        Produto produto5 = new Produto("023", "Samsung galaxy S6 64Gb", 1d, 0);
+
+        NavigableSet<Produto> produtoNavigableSet = new TreeSet<>();
+        produtoNavigableSet.add(produto1);
+        produtoNavigableSet.add(produto2);
+        produtoNavigableSet.add(produto3);
+        produtoNavigableSet.add(produto4);
+        produtoNavigableSet.add(produto5);
+
+        for (Produto produto : produtoNavigableSet.descendingSet()) {
+            System.out.println(produto);
+        }
+        System.out.println("--------------------");
+
+        // lower <
+        // floor <=
+        // higher >
+        // ceiling >=
+
+        System.out.println(produtoNavigableSet.size());
+        System.out.println(produtoNavigableSet.pollLast());
+        System.out.println(produtoNavigableSet.size());
+    }
+}
+
+```
+
+```
+Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5, quantidade=0}
+Produto{serialNumero='123', nome='Laptop Lenovo', preco=2000.0, quantidade=10}
+Produto{serialNumero='879', nome='Teclado Razer', preco=1000.0, quantidade=0}
+Produto{serialNumero='321', nome='Picanha', preco=10.0, quantidade=10}
+Produto{serialNumero='023', nome='Samsung galaxy S6 64Gb', preco=1.0, quantidade=0}
+--------------------
+5
+Produto{serialNumero='012', nome='Samsung galaxy S7 64Gb', preco=3250.5, quantidade=0}
+4
+```
 
 [Voltar ao Índice](#indice)
 
