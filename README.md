@@ -7780,6 +7780,41 @@ Picanha
 
 ## <a name="parte131">Aula 130 Coleções pt 15 NavigableMap e TreeMap</a>
 
+```java
+package br.com.abc.javacore.colecoes.testes;
+
+import java.util.Map;
+import java.util.NavigableMap;
+import java.util.TreeMap;
+
+public class TreeMapTest {
+    public static void main(String[] args) {
+
+        NavigableMap<String, String> map = new TreeMap<>();
+        map.put("A", "Letra A");
+        map.put("D", "Letra D");
+        map.put("B", "Letra B");
+        map.put("C", "Letra C");
+        for(Map.Entry<String, String> entry : map.entrySet()){
+            System.out.println(entry.getKey() + " "+ entry.getValue());
+        }
+        System.out.println(map.headMap("C",true));
+        System.out.println(map.higherEntry("C"));
+        System.out.println(map.descendingMap());
+    }
+}
+
+```
+
+```
+A Letra A
+B Letra B
+C Letra C
+D Letra D
+{A=Letra A, B=Letra B, C=Letra C}
+D=Letra D
+{D=Letra D, C=Letra C, B=Letra B, A=Letra A}
+```
 
 [Voltar ao Índice](#indice)
 
