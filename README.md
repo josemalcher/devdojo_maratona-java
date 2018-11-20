@@ -8462,6 +8462,53 @@ COMMIT;
   
 ## <a name="parte143">Aula 142 JDBC pt 03 Criando conexão com o banco de dados</a>
 
+- https://dev.mysql.com/downloads/connector/j/
+
+```java
+package br.com.abc.javacore.jdbc.conn;
+
+import java.sql.*;
+
+public class ConexaoFactory {
+    //java.sql = Connection, Statement, ResultSet
+    //DriverManager
+    public static Connection getConexao() {
+        String url = "jdbc:mysql://localhost:3306/devdojo_agencia?useTimezone=true&serverTimezone=UTC";
+        //String url = "jdbc:mysql://localhost:3306/devdojo_agencia?useSSL=false";
+        String user = "root";
+        String password = "";
+        try {
+            Connection connection = DriverManager.getConnection(url, user, password);
+            System.out.println(connection);
+            return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+}
+
+```
+
+```java
+package br.com.abc.javacore.jdbc.testes;
+
+import br.com.abc.javacore.jdbc.conn.ConexaoFactory;
+
+
+public class TesteConexao {
+    public static void main(String[] args) {
+        ConexaoFactory conn = new ConexaoFactory();
+        conn.getConexao();
+    }
+}
+
+```
+
+```
+com.mysql.cj.jdbc.ConnectionImpl@2f7a2457
+```
 
 [Voltar ao Índice](#indice)
 
