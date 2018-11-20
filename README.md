@@ -8343,6 +8343,11 @@ public class ClassesExternasEstaticasTest {
   
 ## <a name="parte141">Aula 140 JDBC pt 01 Instalando o banco de dados MySQL</a>
 
+- http://www.wampserver.com/en/
+- https://www.mysql.com/products/workbench/
+
+
+
 
 [Voltar ao Índice](#indice)
 
