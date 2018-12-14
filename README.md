@@ -8516,6 +8516,106 @@ com.mysql.cj.jdbc.ConnectionImpl@2f7a2457
   
 ## <a name="parte144">Aula 143 JDBC pt 04 Inserindo dados no banco com Statement</a>
 
+```java
+
+package br.com.abc.javacore.jdbc.conn;
+
+import java.sql.*;
+
+public class ConexaoFactory {
+    //java.sql = Connection, Statement, ResultSet
+    //DriverManager
+    public static Connection getConexao() {
+        String url = "jdbc:mysql://localhost:3306/devdojo_agencia?useTimezone=true&serverTimezone=UTC";
+        //String url = "jdbc:mysql://localhost:3306/devdojo_agencia?useSSL=false";
+        String user = "root";
+        String password = "";
+        try {
+               return  DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static void close(Connection connection){
+        try{
+            if(connection != null){
+                connection.close();
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void close(Connection connection, Statement stm){
+        close(connection);
+        try{
+            if(stm != null){
+                stm.close();
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+
+}
+
+
+```
+
+```java
+
+package br.com.abc.javacore.jdbc.db;
+
+import br.com.abc.javacore.jdbc.classes.Comprador;
+import br.com.abc.javacore.jdbc.conn.ConexaoFactory;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CompradorDB {
+    public void save(Comprador comprador){
+
+        String sql = "INSERT INTO `devdojo_agencia`.`comprador` (`cpf`,`nome`) VALUES ('"+comprador.getCpf()+"' , '"+comprador.getNome()+"')";
+        System.out.println(sql);
+        Connection conn = ConexaoFactory.getConexao();
+        try{
+            Statement stmt = conn.createStatement();
+            System.out.println(stmt.executeUpdate(sql));
+            ConexaoFactory.close(conn, stmt);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
+}
+
+
+```
+
+```java
+
+package br.com.abc.javacore.jdbc.testes;
+
+import br.com.abc.javacore.jdbc.classes.Comprador;
+import br.com.abc.javacore.jdbc.db.CompradorDB;
+
+
+public class TesteConexao {
+    public static void main(String[] args) {
+
+        Comprador comprador = new Comprador("789.789.789-55", "Jose Junior ");
+        CompradorDB compradorDB = new CompradorDB();
+        compradorDB.save(comprador);
+    }
+}
+
+
+```
+
 
 [Voltar ao Índice](#indice)
 

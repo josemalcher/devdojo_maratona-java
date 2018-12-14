@@ -11,13 +11,33 @@ public class ConexaoFactory {
         String user = "root";
         String password = "";
         try {
-            Connection connection = DriverManager.getConnection(url, user, password);
-            System.out.println(connection);
-            return null;
+               return  DriverManager.getConnection(url, user, password);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
+
+    public static void close(Connection connection){
+        try{
+            if(connection != null){
+                connection.close();
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void close(Connection connection, Statement stm){
+        close(connection);
+        try{
+            if(stm != null){
+                stm.close();
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
 
 }
