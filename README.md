@@ -8623,6 +8623,106 @@ public class TesteConexao {
   
 ## <a name="parte145">Aula 144 JDBC pt 05 Atualizando e excluindo dados com Statement</a>
 
+```java
+package br.com.abc.javacore.jdbc.db;
+
+import br.com.abc.javacore.jdbc.classes.Comprador;
+import br.com.abc.javacore.jdbc.conn.ConexaoFactory;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class CompradorDB {
+    public static void save(Comprador comprador){
+        String sql = "INSERT INTO `devdojo_agencia`.`comprador` (`cpf`,`nome`) VALUES ('"+comprador.getCpf()+"' , '"+comprador.getNome()+"')";
+        System.out.println(sql);
+        Connection conn = ConexaoFactory.getConexao();
+        try{
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            ConexaoFactory.close(conn, stmt);
+            System.out.println("Registro inserido com sucesso");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void delete(Comprador comprador){
+        if(comprador==null || comprador.getId() == null){
+            System.out.println("Não foi possível excluir o registro");
+            return;
+        }
+        String sql = "DELETE FROM `devdojo_agencia`.`comprador` WHERE `id` = '"+comprador.getId()+"'";
+        System.out.println(sql);
+        Connection conn = ConexaoFactory.getConexao();
+        try{
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            ConexaoFactory.close(conn, stmt);
+            System.out.println("Registro excluído com sucesso");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void update(Comprador comprador){
+        if(comprador == null || comprador.getId() == null){
+            System.out.println("Não foi possivel atualizar o registro");
+            return;
+        }
+        String sql = "UPDATE `devdojo_agencia`.`comprador` SET `cpf`= '"+comprador.getCpf()+"', `nome`='"+comprador.getNome()+"' WHERE `id`= '"+comprador.getId()+"'";
+        System.out.println(sql);
+        Connection conn = ConexaoFactory.getConexao();
+        try{
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate(sql);
+            ConexaoFactory.close(conn,stmt);
+            System.out.println("Registro atualizado com sucesso");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+
+}
+
+```
+
+```java
+
+package br.com.abc.javacore.jdbc.testes;
+
+        import br.com.abc.javacore.jdbc.classes.Comprador;
+        import br.com.abc.javacore.jdbc.db.CompradorDB;
+
+
+public class TesteConexao {
+    public static void main(String[] args) {
+
+        atualizar();
+
+    }
+
+
+    public static void inserir(){
+        Comprador comprador = new Comprador("789.789.789-55", "Jose Junior ");
+        CompradorDB.save(comprador);
+    }
+    public static void deletar(){
+        Comprador comprador = new Comprador();
+        comprador.setId(3);
+        CompradorDB.delete(comprador);
+    }
+    public static void atualizar(){
+        Comprador comprador = new Comprador(5,"MARIA SILVA ", "111.000.111-56");
+        CompradorDB.update(comprador);
+    }
+}
+
+
+```
+
 
 [Voltar ao Índice](#indice)
 
