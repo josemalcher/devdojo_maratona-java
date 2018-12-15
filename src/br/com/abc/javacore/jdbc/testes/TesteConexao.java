@@ -3,11 +3,16 @@ package br.com.abc.javacore.jdbc.testes;
         import br.com.abc.javacore.jdbc.classes.Comprador;
         import br.com.abc.javacore.jdbc.db.CompradorDB;
 
+        import java.util.List;
+
 
 public class TesteConexao {
     public static void main(String[] args) {
 
-        atualizar();
+        //List<Comprador> listaComprador =  selecionarTudo();
+        List<Comprador> listaComprador1 =  buscarPorNome("SIL");
+        //System.out.println(listaComprador);
+        System.out.println(listaComprador1);
 
     }
 
@@ -22,7 +27,15 @@ public class TesteConexao {
         CompradorDB.delete(comprador);
     }
     public static void atualizar(){
-        Comprador comprador = new Comprador(5,"MARIA SILVA ", "111.000.111-56");
+        Comprador comprador = new Comprador(5,"111.000.111-56 ", "MARIA SILVA");
         CompradorDB.update(comprador);
     }
+    public static List<Comprador> selecionarTudo(){
+        return CompradorDB.selectALL();
+    }
+    public static List<Comprador> buscarPorNome(String nome){
+        return CompradorDB.selectByName(nome);
+    }
+
+
 }

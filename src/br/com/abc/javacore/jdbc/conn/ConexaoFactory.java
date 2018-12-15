@@ -38,6 +38,16 @@ public class ConexaoFactory {
             e.printStackTrace();
         }
     }
+    public static void close(Connection connection, Statement stm, ResultSet rs){
+        close(connection, stm);
+        try{
+            if(rs != null){
+                rs.close();
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
 
 
 }

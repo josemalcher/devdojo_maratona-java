@@ -8730,6 +8730,60 @@ public class TesteConexao {
   
 ## <a name="parte146">Aula 145 JDBC pt 06 ResultSet pt 01   Selecionando registros</a>
 
+![](img/Aula_145_JDBC_pt_06_ResultSet_pt_01.png)
+
+![](img/Aula_145_JDBC_pt_06_ResultSet_pt_01_tipo_dados.png)
+
+```java
+
+    public static List<Comprador> selectALL() {
+
+        String sql = "SELECT * FROM comprador";
+        Connection conn = ConexaoFactory.getConexao();
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            List<Comprador> compradorList = new ArrayList<>();
+            while (rs.next()) {
+                compradorList.add(new Comprador(rs.getInt("id"), rs.getString("nome"), rs.getString("cpf")));
+            }
+            ConexaoFactory.close(conn, stmt, rs);
+            return compradorList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static List<Comprador> selectByName(String nome) {
+
+        String sql = "SELECT * FROM comprador WHERE nome LIKE '%"+nome+"%'";
+        System.out.println(sql);
+        Connection conn = ConexaoFactory.getConexao();
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            List<Comprador> compradorList = new ArrayList<>();
+            while (rs.next()) {
+                compradorList.add(new Comprador(rs.getInt("id"), rs.getString("nome"), rs.getString("cpf")));
+            }
+            ConexaoFactory.close(conn, stmt, rs);
+            return compradorList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+```
+
+
+```
+
+SELECT * FROM comprador WHERE nome LIKE '%SIL%'
+[Comprador{id=5, cpf='MARIA SILVA ', nome='111.000.111-56'}]
+
+```
+
 
 [Voltar ao Índice](#indice)
 
