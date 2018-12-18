@@ -10,9 +10,13 @@ public class TesteConexao {
     public static void main(String[] args) {
 
         //List<Comprador> listaComprador =  selecionarTudo();
-        List<Comprador> listaComprador1 =  buscarPorNome("SIL");
+        //List<Comprador> listaComprador1 =  buscarPorNome("SIL");
         //System.out.println(listaComprador);
-        System.out.println(listaComprador1);
+        //System.out.println(listaComprador1);
+
+        CompradorDB.selectMetaData();
+        System.out.println("---------");
+        CompradorDB.checkDriverStatus();
 
     }
 

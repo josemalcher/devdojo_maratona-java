@@ -8791,6 +8791,77 @@ SELECT * FROM comprador WHERE nome LIKE '%SIL%'
   
 ## <a name="parte147">Aula 146 JDBC pt 07 ResultSet pt 02   Tipos de ResultSet e metadados</a>
 
+```java
+
+
+    public static void selectMetaData() {
+        String sql = "SELECT * FROM comprador";
+        Connection conn = ConexaoFactory.getConexao();
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            ResultSetMetaData rsmd = rs.getMetaData();
+            rs.next();
+            int qtdColunas = rsmd.getColumnCount();
+            System.out.println("Quantidades coluna: " + qtdColunas);
+            for (int i = 1; i <= qtdColunas; i++) {
+                System.out.println("tabela: " + rsmd.getTableName(i));
+                System.out.println("Nome coluna: " + rsmd.getColumnName(i));
+                System.out.println("Tamanho coluna " + rsmd.getColumnDisplaySize(i));
+            }
+            ConexaoFactory.close(conn, stmt, rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void checkDriverStatus() {
+        Connection conn = ConexaoFactory.getConexao();
+        try {
+            DatabaseMetaData dbmd = conn.getMetaData();
+            if (dbmd.supportsResultSetType(ResultSet.TYPE_FORWARD_ONLY)) {
+                System.out.println("Suporta TYPE_FORWARD_ONLY");
+                if (dbmd.supportsResultSetConcurrency(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE)) {
+                    System.out.println(" e também suporta CONCUR_UPDATABLE");
+                }
+            }
+            if (dbmd.supportsResultSetType(ResultSet.TYPE_SCROLL_INSENSITIVE)) {
+                System.out.println("Suporta TYPE_SCROLL_INSENSITIVE");
+                if (dbmd.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    System.out.println(" e também suporta CONCUR_UPDATABLE");
+                }
+            }
+            if (dbmd.supportsResultSetType(ResultSet.TYPE_SCROLL_SENSITIVE)) {
+                System.out.println("Suporta TYPE_SCROLL_SENSITIVE");
+                if (dbmd.supportsResultSetConcurrency(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    System.out.println(" e também suporta CONCUR_UPDATABLE");
+                }
+            }
+            ConexaoFactory.close(conn);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+```
+
+```
+Quantidades coluna: 3
+tabela: comprador
+Nome coluna: id
+Tamanho coluna 11
+tabela: comprador
+Nome coluna: cpf
+Tamanho coluna 14
+tabela: comprador
+Nome coluna: nome
+Tamanho coluna 70
+---------
+Suporta TYPE_SCROLL_INSENSITIVE
+ e também suporta CONCUR_UPDATABLE
+```
+
 
 [Voltar ao Índice](#indice)
 
