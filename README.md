@@ -8869,6 +8869,59 @@ Suporta TYPE_SCROLL_INSENSITIVE
   
 ## <a name="parte148">Aula 147 JDBC pt 08 ResultSet pt 03   Métodos para posicionamento do cursor</a>
 
+```java
+public static void testTypeScroll() {
+        String sql = "SELECT id, nome, cpf FROM comprador";
+        Connection conn = ConexaoFactory.getConexao();
+        try {
+            Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = stmt.executeQuery(sql);
+            if (rs.last()) {
+                System.out.println("Ultima linha " + new Comprador(rs.getInt("id"), rs.getString("cpf"), rs.getString("nome")));
+                System.out.println("Numero ultima linha: " + rs.getRow());
+            }
+            System.out.println("retornou para a primeira linha " + rs.first());
+            System.out.println("Primeira linha: " + rs.getRow());
+            rs.absolute(4);
+            System.out.println("Linha 4 " + new Comprador(rs.getInt("id"), rs.getString("cpf"), rs.getString("nome")));
+            rs.relative(-1);
+            System.out.println("Linha 3 " + new Comprador(rs.getInt("id"), rs.getString("cpf"), rs.getString("nome")));
+            System.out.println(rs.isLast());
+            System.out.println(rs.isFirst());
+            rs.afterLast();
+            System.out.println("-----------");
+            while (rs.previous()) {
+                System.out.println(new Comprador(rs.getInt("id"), rs.getString("cpf"), rs.getString("nome")));
+            }
+
+            ConexaoFactory.close(conn, stmt, rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+```
+
+```
+Ultima linha Comprador{id=10, cpf='999.222.333-44', nome='Sampaio'}
+Numero ultima linha: 7
+retornou para a primeira linha true
+Primeira linha: 1
+Linha 4 Comprador{id=7, cpf='222.333.111-56', nome='Mariazinha Tatu'}
+Linha 3 Comprador{id=6, cpf='789.456.555-99', nome='CAIO gomes'}
+false
+false
+-----------
+Comprador{id=10, cpf='999.222.333-44', nome='Sampaio'}
+Comprador{id=9, cpf='552.333.111-56', nome='Mariazinha '}
+Comprador{id=8, cpf='000.222.333-44', nome='Vanuza Sampaio'}
+Comprador{id=7, cpf='222.333.111-56', nome='Mariazinha Tatu'}
+Comprador{id=6, cpf='789.456.555-99', nome='CAIO gomes'}
+Comprador{id=5, cpf='111.000.111-56', nome='MARIA SILVA '}
+Comprador{id=1, cpf='000.000.111-56', nome='MARIA JOAQUINA'}
+
+Process finished with exit code 0
+```
 
 [Voltar ao Índice](#indice)
 

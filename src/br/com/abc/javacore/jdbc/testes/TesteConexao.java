@@ -14,9 +14,10 @@ public class TesteConexao {
         //System.out.println(listaComprador);
         //System.out.println(listaComprador1);
 
-        CompradorDB.selectMetaData();
-        System.out.println("---------");
-        CompradorDB.checkDriverStatus();
+        //CompradorDB.selectMetaData();
+        //System.out.println("---------");
+        //CompradorDB.checkDriverStatus();
+        CompradorDB.testTypeScroll();
 
     }
 
