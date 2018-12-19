@@ -17,7 +17,9 @@ public class TesteConexao {
         //CompradorDB.selectMetaData();
         //System.out.println("---------");
         //CompradorDB.checkDriverStatus();
-        CompradorDB.testTypeScroll();
+        //CompradorDB.testTypeScroll();
+
+        CompradorDB.updateNomesToLowerCase();
 
     }
 

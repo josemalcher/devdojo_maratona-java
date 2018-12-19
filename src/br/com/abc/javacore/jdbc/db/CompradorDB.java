@@ -79,7 +79,7 @@ public class CompradorDB {
 
     public static List<Comprador> selectByName(String nome) {
 
-        String sql = "SELECT * FROM comprador WHERE nome LIKE '%"+nome+"%'";
+        String sql = "SELECT * FROM comprador WHERE nome LIKE '%" + nome + "%'";
         System.out.println(sql);
         Connection conn = ConexaoFactory.getConexao();
         try {
@@ -96,7 +96,6 @@ public class CompradorDB {
         }
         return null;
     }
-
 
 
     public static void selectMetaData() {
@@ -178,6 +177,44 @@ public class CompradorDB {
         }
     }
 
+    public static void updateNomesToLowerCase() {
+        String sql = "SELECT id, nome, cpf FROM comprador";
+        Connection conn = ConexaoFactory.getConexao();
+        try {
+            DatabaseMetaData dbmd = conn.getMetaData();
+
+            Statement stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            ResultSet rs = stmt.executeQuery(sql);
+            System.out.println(dbmd.updatesAreDetected(ResultSet.TYPE_SCROLL_INSENSITIVE));
+            System.out.println(dbmd.insertsAreDetected(ResultSet.TYPE_SCROLL_INSENSITIVE));
+            System.out.println(dbmd.deletesAreDetected(ResultSet.TYPE_SCROLL_INSENSITIVE));
+
+            if (rs.next()) {
+                rs.updateString("nome", rs.getString("nome").toUpperCase());
+                //rs.cancelRowUpdates();
+                rs.updateRow();
+                /*if(rs.rowUpdated()){
+                    System.out.println("Linha atualizada");
+                }*/
+
+            }
+            rs.absolute(2);
+            String nome = rs.getString("nome");
+            rs.moveToInsertRow();
+            rs.updateString("nome", nome.toUpperCase());
+            rs.updateString("cpf", "999.999.999-99");
+            rs.insertRow();
+            rs.moveToCurrentRow();
+            System.out.println(rs.getString("nome") + " row" + rs.getRow());
+            rs.absolute(7);
+            rs.deleteRow();
+
+
+            ConexaoFactory.close(conn, stmt, rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 }
